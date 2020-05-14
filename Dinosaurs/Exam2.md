@@ -49,3 +49,47 @@ Ornithischians: have "Bird hips"
 Herrerasauridae (meaning Herrera’s Lizard): Oldest known and one of the 1st dinosaurs; very primitive; close relatives to Theropods; founded by farmer in Argentina; small-medium carnivores; did have lizard-hip, but lacked other features to be considered true dino; five fingers, claws, short forearms, fast runners
 
 Sauropoda (meaning lizard-footed): Largest land animals; Up to 55 tons in body weight; Over 40 meters in body length; High diversity; up to 75 genera; Early Jurassic Period - end of Cretaceous Period; Obligatory quadrupeds, Walked on tips of of toes w/ heels; resting on large pads; Tree-top feeders; Egg-laying; herd animals
+
+Theropoda: bipedal carnivorous dinosaurs, with birdlike legs and necks; theropoda means “beast feet”, a rather inappropriate name; "bird(-like) feet" would have been better. Included in this group are both small forms (among them the ancestors of birds) and large predators such as Allosaurus and Tyrannosaurus. Theropods had the largest and most sophisticated brains of any known dinosaurs. 
+
+Diplodocidae (meaning ("double beams"): were Late Jurassic sauropods. their skulls were long and slender with elongated muzzles; bodies were long and relatively lightly built
+
+"Lizard hips": Three bones radiate from acetabulum in three different directions
+
+Fabroauridae (meaning "Fabre's lizard" in honor of Jean Fabre): Herbivore; Lived in early Jurassic.; First of the Ornithischian Dinosaurs ("Pre-ornithopod).; Very small (modern cat size).; Recessed tooth row.; Cheeks (way to process food in mouth)
+
+Thyreophora (meaning shield bearers): ornithischian (bird-hipped) armored dinosaurs, living from the early Jurassic until the end of the Cretaceous.'; quadripedal, herbivore
+
+Ornithopoda: (meaning "Bird feet") are a suborder of ornithischian dinosaurs that had a beak, a two-legged walk or a two-legged and four-legged walk, and no body armor. These plant-eating dinosaurs lived from the late Triassic period until the Cretaceous period.
+
+Marginocephalia: ("fringed heads") are a clade of extinct herbivorous dinosaurs that inherited a slight shelf or frill (a shelf of bone projecting from the back of the skull). Bipedal and Quadrupedal
+ex triceratops
+
+Ceratosauria (meaning "horned lizard"): meaning "horned lizard", in reference to the horn on its nose, large jaws with blade-like teeth, a large, blade-like horn on the snout and a pair of hornlets over the eyes. The forelimbs were powerfully built but very short. bird hips bipedal
+
+Megalosauridae (meaning "great lizard"): large theropods with large skulls with a powerful bite, strong legs, and three-fingered hands. carnivorous and bipedal
+
+Allosauridae: family of bipedal theropod dinosaurs that lived in the late Jurassic period.; They were medium to large carnivorous dinosaurs, with large, crested skulls and three-fingered hands,
+
+Ornithomimosauridae (meaning "bird-mimic lizards"): ("bird-mimic lizards") or ostrich dinosaurs[7] were theropod dinosaurs which bore a superficial resemblance to modern ostriches. They were fast, omnivorous or herbivorous dinosaurs from the Cretaceous Period; The fore limbs ("arms") were long and slender and bore powerful claws. The hind limbs were long and powerful, with a long foot and short, strong toes terminating in hooflike claws.; had toothless beaks and feathers
+
+Tyrannosauridae: large bipedal carnivores with massive skulls filled with large teeth. Despite their large size, their legs were long and proportioned for fast movement. In contrast, their arms were very small, bearing only two functional digits.; thick, S-shaped neck, and a long, heavy tail acted as a counterweight to balance out the head and torso, with the center of mass over the hips.
+
+Oviraptors (meaning "The Egg Snatchers"): "The Egg Snatchers"; Oviraptors are some of the strangest-looking theropods. They were a very rare group of maniraptorans that are well represented by excellent fossil from the Cretaceous period.; most distinguishing characteristic us a toothless jaw which formed a massive beak. Their jaws were well-muscled and adept at crushing. They are distinguished from the toothless ornithomimosaurs by the development of a massive beak and the highly specific in configuration and structure of the lower jaw with the characteristic articular joint.; The name "oviraptor" (egg snatcher) is a misnomer; their jaws are not useful for eating eggs, but for crushing very hard food.
+
+Troodontidae: bird-like theropods, They were small (about the size of a small adult human), with long and slender hind limbs useful for rapid locomotion, and a long skull filled with distinctive recurved and saw-edged teeth . very smart; a rare and small subgroup of maniraptors
+
+Dromaeosauridae: small to medium-sized feathered carnivores that flourished in the Cretaceous Period. aka raptors; small (wolf-sized) to large (up to 30 feet long!) theropods which had specialized features such as a well-developed slashing talon on their second pedal phalanx (toe) (pictured below), a stiffened tail which possibly functioned as a dynamic stabilizer, and large grasping manus (hands). They were well-equipped with claws, muscular toothy jaws, and agile bodies.
+
+Coelurosauria (meaning "hollow tailed lizards" ): meaning "hollow tailed lizards" is the clade containing all theropod dinosaurs more closely related to birds than to carnosaurs.; Enlarged brains, Long slender tridactyl manus, Kayak-shaped chevrons making the distal part of the tail particularly slender, Long narrow metatarsals
+
+Prosauropoda: before the lizard-footed', were a genus of early herbivourous dinosaurs that lived during the Triassic and early Jurassic periods.; long neck, small skull, serrated teeth; depressed jaw hinge
+
+Titanosauridae: nostrils were large ('macronarian') and they all had crests formed by these nasal bones. Their teeth were either somewhat spatulate (spoon-like) or like pegs or pencils, but were always very small.; many titanosaur species was armored with a small mosaic of small, bead-like scales around a larger scale.; Their necks were of average length, for sauropods, and their tails were whip-like
+
+Camarasauridae: sauropods, forelimbs about same height as hind limbs
+
+Brachiosauridae: family of herbivorous, quadrupedal sauropod dinosaurs. Brachiosaurids had long necks that enabled them to access the leaves of tall trees that other sauropods would have been unable to access.; possessed thick spoon-shaped teeth which helped them to consume tough plants more efficiently than other sauropods. They have also been characterized by a few unique unambiguous synapomorphies; dorsal vertebrae with 'rod-like' transverse processes and an ischium with an abbreviate pubic peduncle.
+
+"Bird hips": Pubis is parallel to the ischium
+
