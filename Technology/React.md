@@ -19,7 +19,7 @@ There are several reasons why it would behoove one to learn React:
 * Large developer/support community. 
 * In-demand skillset -- check StackOverflow; increasingly becoming front-end tool of choice. 
 
-## Key React Features ## 
+## Key React Features & Usecases ## 
 * Component-based architecture: the basic building blocks of React are known as _components_. 
 * Reusable code: the concept of components allows gives rise to highly reusable code; components can be reused/tweaked to be used in different places as necessary. 
 * Declarative nature:
@@ -27,3 +27,5 @@ There are several reasons why it would behoove one to learn React:
     * Compare this to imperative libraries: control flow must be specified; must describe the algorithm step-by-step. 
 * Efficient handling rendering/updating of components. 
 * Gracefully handles DOM updates [usually a very expensive operation]. 
+* Seamless integration with part or the whole of an application. 
+* Stepping stone to React native [for mobile application development]. 
