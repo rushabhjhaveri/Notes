@@ -27,3 +27,12 @@ This is where a transpiler comes in handy.
 * Examples of transpilers: babel, traceur  
 * However, we will be using TypeScript as the transpiler.  
 
+## Var Hoisting & Functional Scope ## 
+Var hosting is JavaScript's default behavior of moving declarations to the top.  
+* This allows for variables to be declared after they have been used.  
+* As an obvious corollary, this also implies that in JS, a variable can be used prior to being declared.  
+
+Vars in JS have _functional scope_.  
+* This means a declared var can be accessed anywhere in the same function.  
+* Functional scope also makes variable declarations and accessing/usage in JS slightly complicated.  
+* Thus, ES6 introduced the _let_ keyword.  
