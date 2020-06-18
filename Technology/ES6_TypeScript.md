@@ -36,3 +36,18 @@ Vars in JS have _functional scope_.
 * This means a declared var can be accessed anywhere in the same function.  
 * Functional scope also makes variable declarations and accessing/usage in JS slightly complicated.  
 * Thus, ES6 introduced the _let_ keyword.  
+
+## let ## 
+_let_ is a keyword introduced in ES6. 
+* not hoisted  
+* block scope [any section of code within curly braces] 
+    * compare to _var_, which has functional scope.  
+
+### Comparison between let and var ### 
+let  | var
+------------- | -------------
+block scope  | functional scope
+cannot be re-declareed  | supports re-declaration without issue
+designed to replace var  | legacy ES5- notation whose usage is gradually intended to be phased out in favor of _let_  
+
+Note: In general, block-scoped variables cannot be re-declared [within the same block], whereas functional-scoped variables can be re-declared [within the same function].
