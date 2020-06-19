@@ -50,4 +50,8 @@ block scope  | functional scope
 cannot be re-declareed  | supports re-declaration without issue
 designed to replace var  | legacy ES5- notation whose usage is gradually intended to be phased out in favor of _let_  
 
-Note: In general, block-scoped variables cannot be re-declared [within the same block], whereas functional-scoped variables can be re-declared [within the same function].
+_Notes_  
+* _In general, block-scoped variables cannot be re-declared [within the same block], whereas functional-scoped variables can be re-declared [within the same function]._  
+* _In closures/loops, var may sometimes produce undesired results and therefore, it is advisable to use **let** in such instances._  
+
+
