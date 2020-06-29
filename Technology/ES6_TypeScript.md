@@ -54,4 +54,7 @@ _Notes_
 * _In general, block-scoped variables cannot be re-declared [within the same block], whereas functional-scoped variables can be re-declared [within the same function]._  
 * _In closures/loops, var may sometimes produce undesired results and therefore, it is advisable to use **let** in such instances._  
 
-
+## const ## 
+The _const_ keyword is used to create read-only, named constants. 
+Similar to _let_, _const_ has block scope and is not hoisted. 
+* However, a value **must** be set with a _const_ declaration, and the value cannot be changed within the same block-scope.  
