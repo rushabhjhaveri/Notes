@@ -63,3 +63,5 @@ Similar to _let_, _const_ has block scope and is not hoisted.
 const  | let
 ------------- | ------------- 
 use when new value reassignment is not expected | use when value reassignment is expected 
+
+## Arrow Functions ## 
