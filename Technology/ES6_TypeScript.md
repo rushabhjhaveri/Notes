@@ -65,3 +65,5 @@ const  | let
 use when new value reassignment is not expected | use when value reassignment is expected 
 
 ## Arrow Functions ## 
+* Generally shorter and more concise than regular functions. 
+* This is generally achieved by using shorthand notations and reducing line usage where possible. 
