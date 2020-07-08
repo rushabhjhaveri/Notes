@@ -67,3 +67,9 @@ use when new value reassignment is not expected | use when value reassignment is
 ## Arrow Functions ## 
 * Generally shorter and more concise than regular functions. 
 * This is generally achieved by using shorthand notations and reducing line usage where possible. 
+
+## this ## 
+* Bound by [innermost] functional scope, depending on where it is being used. 
+* Arrow functions resolves this issue. 
+* Whenever you want to use _this_ in the execution context, then using arrow functions may be beneficial. 
+* However, if you want to use _this_ in a local function/want a separate _this_ for the function itself, then use _function()_ instead of arrow functions.  
