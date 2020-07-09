@@ -73,3 +73,9 @@ use when new value reassignment is not expected | use when value reassignment is
 * Arrow functions resolves this issue. 
 * Whenever you want to use _this_ in the execution context, then using arrow functions may be beneficial. 
 * However, if you want to use _this_ in a local function/want a separate _this_ for the function itself, then use _function()_ instead of arrow functions.  
+
+## Default Function Parameters ## 
+* In ES5, when a parameter is not specified for a function [that requires/specifies that it takes parameters in its definition] during its call, then the value would be undefined.  
+* However, ES6 offers a feature wherein default values can be set for parameters in parentheses. 
+* Thus, if no value/parameter is specified, the default value is taken, otherwise the specified value is taken. 
+* arguments.length only takes into consideration the number of arguments _passed during a function call_ and _ignores any default values_ in its computation. 
