@@ -79,3 +79,8 @@ use when new value reassignment is not expected | use when value reassignment is
 * However, ES6 offers a feature wherein default values can be set for parameters in parentheses. 
 * Thus, if no value/parameter is specified, the default value is taken, otherwise the specified value is taken. 
 * arguments.length only takes into consideration the number of arguments _passed during a function call_ and _ignores any default values_ in its computation. 
+
+## Rest Operator ## 
+* A rest parameter presents an indefinite number of [function] arguments as an array. 
+* Syntax in function definition [within parentheses] is ``` ... ``` followed by the variable parameter. 
+* How it works: the variable/indefinite args are converted to an array, upon which array operations like iteration are performed. 
