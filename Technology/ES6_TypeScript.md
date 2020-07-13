@@ -90,3 +90,8 @@ Can be thought of as the opposite of the rest operator.
 * While the rest operator takes multiple elements and packages them into an array, the spread operator takes an array and splits it into constituent elements. 
 * Bears the same syntax [three dots preceding variable] as rest operator. 
 * However, the difference lies in the fact that the rest operator is used in the _function definition_, whereas the spread operator is used during _function call_.
+
+## Object Literals ## 
+* ES6 provides several shorthand notations for object literals. 
+* Can have spaces in property names. 
+* Can also use variables as property names [provided they are enclosed within square brackets]. 
