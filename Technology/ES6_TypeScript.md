@@ -103,3 +103,9 @@ Can be thought of as the opposite of the rest operator.
 * Once completed iterating over an array, any extra variables that could not be assigned a value will be assigned "undefined". 
 * Can also destructure arrays to only procure necessary elements through the use of commas. 
 * Can also use the rest operator to destructure arrays [creates an array of subset of elements]. 
+
+### Objects ### 
+* To destructure an object is to pull apart the elements of the object. 
+* Use curly braces to denote object instead of the square brackets used to denote arrays in order to create destructured object. 
+* Can create aliases for individual elements by using a colon followed by the intended alias for the variable/element. 
+* However, if creating an alias, then only the alias can thereonforth be used to reference said element, not the original variable name. 
