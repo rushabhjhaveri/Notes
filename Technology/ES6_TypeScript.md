@@ -94,4 +94,12 @@ Can be thought of as the opposite of the rest operator.
 ## Object Literals ## 
 * ES6 provides several shorthand notations for object literals. 
 * Can have spaces in property names. 
-* Can also use variables as property names [provided they are enclosed within square brackets]. 
+* Can also use variables as property names [provided they are enclosed within square brackets].
+
+## Destructuring ## 
+### Arrays ### 
+* To destructure an array is to pull apart the elements of the array. 
+* Take elements of array and assign them to individual variables. 
+* Once completed iterating over an array, any extra variables that could not be assigned a value will be assigned "undefined". 
+* Can also destructure arrays to only procure necessary elements through the use of commas. 
+* Can also use the rest operator to destructure arrays [creates an array of subset of elements]. 
