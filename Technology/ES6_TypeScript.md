@@ -109,3 +109,10 @@ Can be thought of as the opposite of the rest operator.
 * Use curly braces to denote object instead of the square brackets used to denote arrays in order to create destructured object. 
 * Can create aliases for individual elements by using a colon followed by the intended alias for the variable/element. 
 * However, if creating an alias, then only the alias can thereonforth be used to reference said element, not the original variable name. 
+
+## String Templates ## 
+* Offer a convenient way to work with strings. 
+* Example is using backticks (``) to eliminate the quotes and concatenation (+) operator often used when working with strings.
+* By eliminating the double quotes otherwise used to denote strings, string templates allow for the use of single and double quotes without any messy syntax/unusual behavior and ambiguity that would otherwise come with the dual usage of quotes for string denotation and general use.
+* Support multi-line strings. 
+* Note: when using backticks, whitespaces are significant [aka those characters are not ignored].   
