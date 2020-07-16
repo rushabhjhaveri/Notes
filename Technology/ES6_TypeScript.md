@@ -115,4 +115,10 @@ Can be thought of as the opposite of the rest operator.
 * Example is using backticks (``) to eliminate the quotes and concatenation (+) operator often used when working with strings.
 * By eliminating the double quotes otherwise used to denote strings, string templates allow for the use of single and double quotes without any messy syntax/unusual behavior and ambiguity that would otherwise come with the dual usage of quotes for string denotation and general use.
 * Support multi-line strings. 
-* Note: when using backticks, whitespaces are significant [aka those characters are not ignored].   
+* Note: when using backticks, whitespaces are significant [aka those characters are not ignored]. 
+
+## for of Loop ## 
+* Used to loop over iterables. 
+* More efficient than regular for loop as it removes the necessity of an index variable to access each individual element of an iterable array/string/similar object. 
+* Syntax: for <unitvar> of <iterable>
+* Instead, for of stores each individual element of the iterable in unitvar, so that unitvar itself can be logged to the console/worked with as necessary. 
