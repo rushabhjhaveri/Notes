@@ -122,3 +122,9 @@ Can be thought of as the opposite of the rest operator.
 * More efficient than regular for loop as it removes the necessity of an index variable to access each individual element of an iterable array/string/similar object. 
 * Syntax: for <unitvar> of <iterable>
 * Instead, for of stores each individual element of the iterable in unitvar, so that unitvar itself can be logged to the console/worked with as necessary. 
+
+## Classes ## 
+* Syntax: class <classname> { // body }
+* Classes can be instantialized. 
+* Performing a typeof(classname) will show that classes are really just a special kind of function which are not hoisted. 
+* Class syntax does not introduce the object to JS, rather it is just a syntactical spin on existing prototype-based inheritance.
