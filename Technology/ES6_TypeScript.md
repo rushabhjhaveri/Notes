@@ -128,3 +128,7 @@ Can be thought of as the opposite of the rest operator.
 * Classes can be instantialized. 
 * Performing a typeof(classname) will show that classes are really just a special kind of function which are not hoisted. 
 * Class syntax does not introduce the object to JS, rather it is just a syntactical spin on existing prototype-based inheritance.
+
+### Class Body and Methods ### 
+* Constructor method used for creating and initializing an object (only one constructor per object).
+* Syntax: using _constructor_ keyword. 
