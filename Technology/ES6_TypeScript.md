@@ -132,3 +132,9 @@ Can be thought of as the opposite of the rest operator.
 ### Class Body and Methods ### 
 * Constructor method used for creating and initializing an object (only one constructor per object).
 * Syntax: using _constructor_ keyword. 
+
+### Class Inheritance ### 
+* _extends_ keyword is used to create a new class that derives from parent class. 
+* If no constructor specified in derived class, it will use constructor of parent class. 
+* _super()_ is important/necessary because parent class constructor needs to be called before the subclass constructor. 
+    * This also ensures that if you call any methods in the constructor, the parent class is successfully set up. 
