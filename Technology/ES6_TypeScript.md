@@ -138,3 +138,12 @@ Can be thought of as the opposite of the rest operator.
 * If no constructor specified in derived class, it will use constructor of parent class. 
 * _super()_ is important/necessary because parent class constructor needs to be called before the subclass constructor. 
     * This also ensures that if you call any methods in the constructor, the parent class is successfully set up. 
+
+## Modules ## 
+* Modules partitions code into segments that belong together. 
+    * Similar to how a book is divided into chapters. 
+* Benefits of modularity:
+    * separation of concern
+    * makes for easier comprehension and searching
+* Module syntax standardized in ES6. 
+* Export/import are the main concepts regarding module porting and usage. 
