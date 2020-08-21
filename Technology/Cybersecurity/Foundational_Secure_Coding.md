@@ -95,3 +95,5 @@ OWASP - Open Web Application Security Project
 
 ### Conclusion ### 
 * Regular penetration testing should be done to actively identify vulnerabilities 
+
+## OWASP Top 10 - Changes from 2013 to 2017 ## 
