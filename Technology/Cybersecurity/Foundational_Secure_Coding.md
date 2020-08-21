@@ -32,16 +32,16 @@ OWASP - Open Web Application Security Project
 * Data classification according to type to be better protected 
 * Only collect data you absolutely need 
 
-### XML External Entries [XEE] ### 
+### XML External Entries [XXE] ### 
 * Subcategory of injection 
 * How it works: 
     * XML: document format used to communicate information between computer systems
         * Pro: XML is both human readable and machine readable 
         * Frequently used between applications so they can communicate with each other
     * When XML is sent to an application, an _XML Processor_ reads and interprets the data
-    * When an application accepts XML data from an _untrusted source_, an XEE attack can occur 
+    * When an application accepts XML data from an _untrusted source_, an XXE attack can occur 
         * Similar to injection, when this happens, it can cause the application interpreting the malicious code to act in unintended ways
-* One such example of the type of impact an XEE attack can have on an application: Denial of Service [DoS]
+* One such example of the type of impact an XXE attack can have on an application: Denial of Service [DoS]
     * Result of a DoS attack: application no longer functions
     * DoS floods application with so much input that it ultimately just cannot handle it and fails over
 * Example attacks: billion laughs, XML bombs 
@@ -93,5 +93,5 @@ OWASP - Open Web Application Security Project
     * Robust incident response 
 * These two actions help in being proactive, rather than reactive  
 
-## Conclusion ## 
+### Conclusion ### 
 * Regular penetration testing should be done to actively identify vulnerabilities 
