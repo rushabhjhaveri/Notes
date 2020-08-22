@@ -135,4 +135,14 @@ OWASP - Open Web Application Security Project
         * Brute force the login
         * Exploit password reset
         * Discover weak credentials 
-* 
+* Common defences against broken authentication attacks
+    * Protect the cookies
+        * Use the HttpOnly flag
+        * Make sure cookies are flagged as "secure" 
+    * Decrease the window of risk 
+        * Expire sessions quickly 
+        * Re-challenge user on key actions
+    * Harden account management
+        * Allow [and encourage] strong passwords 
+        * Implement login rate limiting and lockouts
+* IRL Broken Auth Example: Apple Hack
