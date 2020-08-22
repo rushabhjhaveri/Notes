@@ -97,3 +97,42 @@ OWASP - Open Web Application Security Project
 * Regular penetration testing should be done to actively identify vulnerabilities 
 
 ## OWASP Top 10 - Changes from 2013 to 2017 ## 
+* XML External Entries [XXE] is new to the OWASP Top 10. The injection type has become a significant enough risk to be identified individually 
+* Broken Access Control was created by merging Insecure Direct Object Regerence and Missing Function Level Access Control -- both bery prevalent and major risks even today 
+* Insecure Deserialization is a new addition to the list; it too is another type of injection that has risen in popularity and risk posed recently 
+* Insufficient Logging and Monitoring is another new addition to the list; it is not a vulnerability in itself, rather, the lack of logging and monitoring presents a serious risk. Detecting breaches, responding to incidents, and digital forensics become exceedingly challenging without proper logging and monitoring. 
+* Cross-Site Request Forgery [CSRF] has been dropped from the top ten list because these kinds of vulnerabilities are not as prevalent as they used to be due to protections built into modern web application frameworks. It's still an important topic to know though, and the risk must still be addressed within applications. 
+* Unvalidated Redirects and Forwards has also been dropped from the list as modern applications use the redirect pattern far less frequently than their past counterparts, resulting in less prevalence of this vulnerability. However, it is still critical to understand this vulnerability, as it helps understand the risk posed by using redirects, and what to do if your application must include them.  
+
+## Deep Dive into the OWASP Top 10 ## 
+
+### Injection ### 
+
+* Common defences againt injection attacks
+    * Whitelist untrusted data 
+        * Think about what input is trusted
+        * Does input adhere to expected patterns
+    * Parameterize SQL statements
+        * Separate query from input data
+        * Type cast each parameter
+    * Finetune DB permissions
+        * Segment accounts for admin and public 
+        * Apply principle of least privilege
+* IRL Injection Example: Sony Hack
+
+### Broken Authentication and Session Management ### 
+* Average exploitability, widespread prevalance, average detectability, severe technical impact
+* Various ways a session can be hijacked/broken auth/session can be exploited: 
+    * Auth Cookie Theft
+        * Exploit an XSS risk
+        * Retrieve it from victim's PC
+        * Sniff it over an insecure connection 
+    * Session ID Theft 
+        * Copy and paste a URL with it
+        * Retrieve it from an [insecure] log
+        * Send it via an insecure email 
+    * Account Management Hack
+        * Brute force the login
+        * Exploit password reset
+        * Discover weak credentials 
+* 
