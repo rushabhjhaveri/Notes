@@ -145,4 +145,129 @@ OWASP - Open Web Application Security Project
     * Harden account management
         * Allow [and encourage] strong passwords 
         * Implement login rate limiting and lockouts
-* IRL Broken Auth Example: Apple Hack
+* IRL Broken Auth Example: Apple Hack 
+
+### Cross-Site Scripting [XSS] ### 
+* Average exploitability, very widespread prevalence, easily detected, moderate technical impact  
+* Common defences against XSS attacks: 
+    * Whitelist untrusted data
+        * What input is trusted
+        *  Does input adhere to expected patterns 
+    * Always encode output 
+        * Never simply reflect untrusted data
+        * This applies to data in DB too 
+    * Encode for context 
+        * HTML/attributes/JS/CSS
+        * Wrong encoding in wrong context is useless 
+* IRL XSS Example: Samy's MySpace Hack 
+
+### Insecure Direct Object References ### 
+* Easy exploitability, common prevalence, easily detectable, moderate technical impact 
+* Common defences against direct reference attacks: 
+    * Implement access controls
+        * Be explicit about who can access resources 
+        * Expect rules to be tested by malicious actors
+    * Use indirect maps
+        * Don't expose internal keys externally 
+        * Map them to temporary ones
+    * Avoid predictable keys
+        * Incrementing integers are enumerable 
+        * Natural keys are discoverable 
+* IRL Indirect Object Reference Example: Citigroup Hack 
+
+### Security Misconfiguration ### 
+* Easy exploitability, common prevalence, easily detectable, moderate technical impact 
+* Common defences against security misconfiguration attacks:
+    * Always harden the install 
+        * Turn off features that aren't needed 
+        * Apply principle of least privilege 
+    * Tune the app security config 
+        * Ensure its production-ready
+        * Defaults are often not right 
+    * Ensure packages are up to date 
+        * Be conscious of 3rd-party tool risks 
+        * Have a strategy to monitor and update 
+* IRL Security Misconfiguration Example: ELMAH 
+
+### Sensitive Data Exposure ### 
+* Difficult exploitability, uncommon prevalence, average detectability, severe technical impact 
+* Various forms of sensitive data exposure: 
+    * Insufficient use of SSL
+        * Login not loaded over HTTPS 
+        * Mixed mode 
+        * Cookies not sent securely 
+    * Bad crytography 
+        * Incorrect password storage 
+        * Weak algorithms chosen 
+        * Poor protection of keys 
+    * Other exposure risks 
+        * Browser autocomplete 
+        * Leaked via logs 
+        * Disclosure via URL 
+* Common defences against senstive data exposure: 
+    * Minimize sensitive data collection 
+        * You can't lose what you don't have 
+        * Reduce window of storage 
+    * Apply HTTPS everywhere 
+        * It's too easy to "insufficiently" implement 
+        * Start with it everywhere - it's easy 
+    * Use strong cryptographic storage 
+        * Hashing algorithms designed for passwords 
+        * Be very careful with key management 
+* IRL Sensitive Data Exposure Example: Tunisia Logins Theft 
+
+### Missing Function Level Access Control ### 
+* Easy exploitability, common prevalence, average detectability, moderate technical impact 
+* Common defences against missing function level access control: 
+    * Define a clear authorization model 
+        * Define centrally and consistently 
+        * Use roles and apply membership  
+    * Check for forced browsing 
+        * Check for default framework resources 
+        * Automated scanners are excellent for this 
+    * Always test unprivileged roles 
+        * Capture and replay privileged requests 
+        * Include POST requests and async calls 
+* IRL Missing Function Level Access Control Example: Westfield iPhone App Fiasco 
+
+### Cross-Site Request Forgery [CSRF] ### 
+* Average exploitability, common prevalence, easily detectable, moderate technical impact 
+* Common defences against CSRF attacks: 
+    * Employ anti-forgery tokens 
+        * CSRF is exploited by predictable patterns 
+        * Tokens add randomness to the request 
+    * Validate the referrer 
+        * Valid requests don't originate externally 
+        * The referrer is in each request header 
+    * Other defences 
+        * Native browser defences 
+        * Fraud detection patterns 
+* IRL CSRF Example: Brazilian Modems 
+
+### Using Components With Known Vulnerabilities ### 
+* Average exploitability, widespread prevalence, difficult to detect, moderate technical impact 
+* Common defences for this attack: 
+    * Identify components and versions 
+        * Components are often used haphazardly 
+        * Keep track of components and versions  
+    * Components should be monitored 
+        * Keep abreast of project updates 
+        * Monitor common vulnerabilities and exploitabilities [CVE's] impacting the components 
+    * Keep components updated 
+        * Use the framework's package management 
+        * Regularly monitor new releases 
+* IRL Example: WordPress Brute Force 
+
+### Unvalidated Redirects and Forwards ### 
+* Average exploitability, uncommon prevalence, easily detectable, moderate technical impact 
+* Common defences for this kind of attack: 
+    * Use a URL whitelist 
+        * What URL's are allowed to be redirected to 
+        * Abort if the URL is not allowed  
+    * Use indirect references 
+        * Pass an ID to the redirect, not a URL 
+        * Resolve the URL from a reference map 
+    * Check the referrer 
+        * Did the redirect originate from the site 
+        * May need to whitelist multiple sites 
+* IRL Example: Government Websites 
