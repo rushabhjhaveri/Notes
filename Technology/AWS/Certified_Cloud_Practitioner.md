@@ -251,7 +251,12 @@ CloudFront uses two different kinds of distributions:
 
 * Web Distribution - Typically for websites. 
 
-* RTMP - Used for media streaming.
+* RTMP - Used for media streaming. 
+
+Additional Notes 
+* Edge locations are not just read-only -- you can write to them too (i.e., put an object on to them). 
+* Objects are cached for the live of TTL. 
+* Cached objects can be cleared, but there is a charge for that. 
 
 
 ## EC2 - Elastic Compute Cloud ## 
@@ -347,4 +352,10 @@ Types of EBS:
 
     * Cold HDD (SC1) - Lowest cost HDD volume designed for less frequently accessed workloads [File Servers].
 
-    * Magnetic - Previous Generation.
+    * Magnetic - Previous Generation. 
+
+Notes: 
+* EC2 is a compute-based service - is not serverless, it's a server 
+* Use private key to connect to EC2 
+* Security groups are virtual firewalls in the cloud. You need to open ports to use them. Popular ports are SSH [22], HTTP [80], HTTPS [443], RDP [3389]. 
+* Always design for failure. Have one EC2 instance in each availability zone. 
