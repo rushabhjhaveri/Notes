@@ -221,7 +221,12 @@ You are charged for S3 in the following ways:
 * Cross Region Replication Pricing
 
 
-Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your end users and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge location. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path. 
+Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your end users and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge location. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.  
+
+Main Exam Tips for S3: 
+* YOu can use bucket policies to make entire S3 buckets public 
+* You can use S3 to host static websites (such as .html). Websites that require database connections such as Wordpress, etc. cannot be hosted on S3. 
+* S3 scales automatically to meet demand. Many enterprises will put static websites on S3 when they think there are going to be a large number of requests. 
 
 
 ## CloudFront ##  
@@ -237,7 +242,6 @@ CloudFront - Key Terminology
 * Origin - This is the origin of all the files that the CDN will distribute. This can be an S3 Bucket, an EC2 instance, an Elastic Load Balancer, or Route53. 
 
 * Distribution - This is the name given to the CDN which consists of a collection of Edge Locations.
-
 
 
 Amazon CloudFront can be used to deliver your entire website, including dynamic, static, streaming, and interactive content using a global network of edge locations. Requests for your content are automatically routed to the nearest edge location, so content is delivered with the best possible performance. 
