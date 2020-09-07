@@ -359,3 +359,10 @@ Notes:
 * Use private key to connect to EC2 
 * Security groups are virtual firewalls in the cloud. You need to open ports to use them. Popular ports are SSH [22], HTTP [80], HTTPS [443], RDP [3389]. 
 * Always design for failure. Have one EC2 instance in each availability zone. 
+
+## IAM Roles ## 
+Roles are much more secure than using access key id's and secret access keys, and are easier to manage. 
+
+You can apply roles to EC2 instances at any time. When done, the change takes place immediately. 
+
+Roles are universal [do not need to specify what region they apply to]. 
