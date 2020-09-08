@@ -387,4 +387,46 @@ In AWS EC2, there are three different types of load balancers to choose from:
     * Capable of handling millions of requests per second securely while maintaining low latency 
 * Classic Load Balancer 
     * For when an existing application is running in the EC2-Classic network 
+    * Previous Generation
 
+## Databases ## 
+Relational databases: tables [composed of columns and rows]
+
+Relational databases on AWS - RDS 
+* Microsoft SQL Server 
+* Oracle 
+* MySQL 
+* PostgreSQL 
+* Amazon Aurora 
+* MariaDB 
+
+RDS has two key features: 
+* Multi-AZ [Multiple Availability Zones]: For disaster recovery 
+* Read Replicas: for performance 
+
+Non-Relational Databases: collections [equivalent to tables] composed of documents [equivalent to rows], with each document containing key-value pairs [equivalent to fields] 
+* Columns in table can vary 
+* This will not affect other rows in the database 
+
+Amazon's non-relational database: DynamoDB 
+
+Data Warehousing
+* Used for business intelligence 
+* Tools like: 
+    * Cognos 
+    * Jaspersoft 
+    * SQL Server Reporting Services 
+    * Oracle Hyperion 
+    * SAP Netweaver 
+* Used to pull in very large and complex data sets 
+* Usually used by management to do queries on data [such as current performance vs targets, etc] 
+* Data warehousing databases use a different type of architecture from both a database perspective and infrastructure layer perspective 
+* Amazon's data warehouse solution: Redshift 
+
+ElastiCache 
+* Web service that makes it easier to deploy, operate, and scale in-memory cache in the cloud 
+* Service improves the performance of web applications by allowing one to retrieve information from fast, managed, in-memory caches, instead of relying entirely on slower disk-based caches 
+* Supports two open-source in-memory caching engines: 
+    * Memcached 
+    * Redis 
+* Helps take huge load off production databases for commonly queried items [especially when number of such queries scales very rapidly]
