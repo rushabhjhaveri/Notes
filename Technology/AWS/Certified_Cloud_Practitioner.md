@@ -366,3 +366,25 @@ Roles are much more secure than using access key id's and secret access keys, an
 You can apply roles to EC2 instances at any time. When done, the change takes place immediately. 
 
 Roles are universal [do not need to specify what region they apply to]. 
+
+## Elastic Load Balancers ##  
+
+Load balancing: the process of distributing a set of tasks over a set of resources, with the aim of making their overall processing more efficient. 
+
+In AWS EC2, there are three different types of load balancers to choose from: 
+* Application Load Balancer 
+    * For when a flexible feature set is needed for web applications with HTTP/HTTPS traffic 
+    * Operates at the request level 
+    * Provide advanced routing and visibility features targeted at application architectures, including microservices and containers 
+* Network Load Balancer 
+    * For when the application needs the following: 
+        * ultra-high performance 
+        * TLS offloading at scale 
+        * centralized certificate deployment 
+        * support for UDP 
+        * static IP addresses 
+    * Operates at the connection level 
+    * Capable of handling millions of requests per second securely while maintaining low latency 
+* Classic Load Balancer 
+    * For when an existing application is running in the EC2-Classic network 
+
