@@ -429,4 +429,11 @@ ElastiCache
 * Supports two open-source in-memory caching engines: 
     * Memcached 
     * Redis 
-* Helps take huge load off production databases for commonly queried items [especially when number of such queries scales very rapidly]
+* Helps take huge load off production databases for commonly queried items [especially when number of such queries scales very rapidly] 
+
+## Route 53 ## 
+Amazon's DNS Service 
+
+Is global, similar to IAM and S3 
+
+Can use it to direct traffic all around the world and to register domain names 
