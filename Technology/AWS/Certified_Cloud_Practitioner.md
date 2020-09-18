@@ -437,3 +437,19 @@ Amazon's DNS Service
 Is global, similar to IAM and S3 
 
 Can use it to direct traffic all around the world and to register domain names 
+
+## Elastic Beanstalk ## 
+Quickly deploy and manage applications in the AWS cloud without worrying about the infrastructure that runs those applications. 
+
+Simply upload your application, and EBS automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring. 
+
+## CloudFormation ## 
+AWS CloudFormation is a service that helps model and set up AWS resources so that less time can be spent managing said resources, and more time on the applications in AWS. 
+
+Create a template that describes all the AWS resources needed [such as EC2 instances, RDS DB instances, etc.] and CloudFormation takes care of configuring the resources for you. 
+
+Do not need to individually create and configure AWS resources and figure out what's dependent on what; CloudFormation handles all of that. 
+
+Elastic Beanstalk and CloudFormation are both free resources, but the resources that they provision, such as EC2 instances, are not free. 
+
+Elastic Beanstalk is limited in what it can provision and is not programmable; CloudFormation can provision almost any AWS Service and is completely programmable. 
