@@ -453,3 +453,60 @@ Do not need to individually create and configure AWS resources and figure out wh
 Elastic Beanstalk and CloudFormation are both free resources, but the resources that they provision, such as EC2 instances, are not free. 
 
 Elastic Beanstalk is limited in what it can provision and is not programmable; CloudFormation can provision almost any AWS Service and is completely programmable. 
+
+## Architecting For The Cloud - Best Practices ## 
+This section based on AWS white paper - read it! 
+
+Traditional Computing vs Cloud Computing 
+* IT assets as provisioned resources 
+* Global, available, and scalable capacity 
+* Higher level managed services 
+* Built-in security 
+* Architecting for cost 
+* Operations on AWS 
+
+Scalability 
+* Scale up 
+* Scale out 
+    * Stateless applications (like lambdas) 
+    * Distribute load to multiple nodes 
+    * Stateless components 
+    * Stateful components 
+    * Implement session affinity 
+    * Distributed processing 
+    * Implement distributed processing 
+
+Disposable Resources Instead of Fixed Servers 
+* Instantiating compute resources 
+    * Bootstrapping 
+    * Golden images 
+    * Containers 
+    * Hybrid 
+* Infrastructure as code 
+    * CloudFormation 
+
+Automation 
+* Serverless management and deployment 
+* Infrastructure management and deployment 
+    * AWS Elastic Beanstalk 
+    * EC2 auto recovery 
+    * AWS Systems Manager 
+    * Autoscaling 
+* Alarms and events 
+    * CloudWatch alarms 
+    * CloudWatch events 
+    * Lambda scheduled events 
+    * AWS WAF security automations  
+
+Loose Coupling 
+* Well defined interfaces 
+    * Amazon API Gateway 
+* Service discovery 
+    * Implement service discovery 
+* Asynchronous integration 
+* Distributed systems best practices 
+    * Graceful failure in practice 
+
+Services Not Servers 
+* Managed services 
+* Serverless architectures 
