@@ -551,3 +551,44 @@ Diving into each one:
     * Reduce privileged access 
     * Security as code 
     * Real-time auditing 
+
+## Global AWS Services ## 
+Global services: 
+* IAM 
+* Route53 
+* CloudFront 
+* SNS 
+* SES 
+
+Some services give global views but are regional [such as S3] 
+
+## AWS Services Deployed On Premise ## 
+AWS services that can be used on-prem: 
+* Snowball [data disk to load on-prem data to send back to AWS to upload to S3]
+* Snowball Edge [Snowball + a CPU]
+* Storage Gateway [Snowball but stays on-prem - way to cache on-prem files] 
+* CodeDeploy [deploy application code to EC2 + on-prem] 
+* Opsworks [similar to EBS] 
+* IoT Greengrass [connects IoT devices to the cloud] 
+
+## CloudWatch 101 ## 
+Amazon CloudWatch is a monitoring service to monitor AWS resources in addition to applications running on AWS 
+
+Things CloudWatch can monitor: 
+* Compute 
+    * EC2 instances 
+    * Autoscaling groups 
+    * Elastic load balancers 
+    * Route53 health checks 
+* Storage & Content Delivery 
+    * EBS volumes 
+    * Storage gateways 
+    * CloudFront 
+* Host-Level Metrics 
+    * CPU 
+    * Network 
+    * Disk 
+    * Status check 
+By default, CloudWatch with EC2 will monitor events every five minutes, but that can be lowered to a minute by toggling on detailed monitoring 
+
+Can create CloudWatch alarms which trigger further notifications 
