@@ -510,3 +510,4 @@ Loose Coupling
 Services Not Servers 
 * Managed services 
 * Serverless architectures 
+
