@@ -465,49 +465,89 @@ Traditional Computing vs Cloud Computing
 * Architecting for cost 
 * Operations on AWS 
 
-Scalability 
-* Scale up 
-* Scale out 
-    * Stateless applications (like lambdas) 
-    * Distribute load to multiple nodes 
-    * Stateless components 
-    * Stateful components 
-    * Implement session affinity 
-    * Distributed processing 
-    * Implement distributed processing 
+Diving into each one: 
+* Scalability 
+    * Scale up 
+    * Scale out 
+        * Stateless applications (like lambdas) 
+        * Distribute load to multiple nodes 
+        * Stateless components 
+        * Stateful components 
+        * Implement session affinity 
+        * Distributed processing 
+        * Implement distributed processing 
+* Disposable Resources Instead of Fixed Servers 
+    * Instantiating compute resources 
+        * Bootstrapping 
+        * Golden images 
+        * Containers 
+        * Hybrid 
+    * Infrastructure as code 
+        * CloudFormation 
+* Automation 
+    * Serverless management and deployment 
+    * Infrastructure management and deployment 
+        * AWS Elastic Beanstalk 
+        * EC2 auto recovery 
+        * AWS Systems Manager 
+        * Autoscaling 
+    * Alarms and events 
+        * CloudWatch alarms 
+        * CloudWatch events 
+        * Lambda scheduled events 
+        * AWS WAF security automations  
+* Loose Coupling 
+    * Well defined interfaces 
+        * Amazon API Gateway 
+    * Service discovery 
+        * Implement service discovery 
+    * Asynchronous integration 
+    * Distributed systems best practices 
+        * Graceful failure in practice 
+* Services Not Servers 
+    * Managed services 
+    * Serverless architectures 
 
-Disposable Resources Instead of Fixed Servers 
-* Instantiating compute resources 
-    * Bootstrapping 
-    * Golden images 
-    * Containers 
-    * Hybrid 
-* Infrastructure as code 
-    * CloudFormation 
-
-Automation 
-* Serverless management and deployment 
-* Infrastructure management and deployment 
-    * AWS Elastic Beanstalk 
-    * EC2 auto recovery 
-    * AWS Systems Manager 
-    * Autoscaling 
-* Alarms and events 
-    * CloudWatch alarms 
-    * CloudWatch events 
-    * Lambda scheduled events 
-    * AWS WAF security automations  
-
-Loose Coupling 
-* Well defined interfaces 
-    * Amazon API Gateway 
-* Service discovery 
-    * Implement service discovery 
-* Asynchronous integration 
-* Distributed systems best practices 
-    * Graceful failure in practice 
-
-Services Not Servers 
-* Managed services 
-* Serverless architectures 
-
+* Databases 
+    * Relational databases [Aurora] 
+        * Scalability 
+        * High availability - multi-az 
+        * Anti-patterns - no need for joins or complex transactions; use no-sql 
+    * Non-Relational databases [DynamoDB] 
+        * Scalability 
+        * High availability - multi-az 
+        * Anti-patterns - requires joins or complex transactions, use relational databases. If you have large binary files [audio/video/image], consider storing them in Amazon S3 
+    * Data Warehouse [Redshift] 
+        * Scalability 
+        * High availability - multi-az 
+        * Anti-patterns - not meant for on line transaction processing [OLTP] 
+    * Search 
+        * Scalability 
+        * High availability 
+    * Graph Databases [Neptune]
+        * Scalability 
+        * High availability 
+* Managing Increased Volumes of Data 
+    * Data lake approach 
+* Removing Single Points of Failure 
+    * Introducing redundancy 
+    * Detect failure 
+    * Durable data storage 
+    * Automated multi-data center resilience 
+    * Fault isolation & traditional horizontal scaling 
+    * Sharding 
+* Optimize for Cost 
+    * Right sizing 
+    * Elasticity 
+    * Take advantage of the variety of purchasing options 
+        * Reserved capacity 
+        * Spot instances 
+* Caching 
+    * Application caching 
+    * Edge caching 
+* Security 
+    * Use AWS features for defense in depth 
+    * Share security responsibility with AWS 
+    * Reduce privileged access 
+    * Security as code 
+    * Real-time auditing 
