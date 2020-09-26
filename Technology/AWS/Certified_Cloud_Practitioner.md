@@ -592,3 +592,10 @@ Things CloudWatch can monitor:
 By default, CloudWatch with EC2 will monitor events every five minutes, but that can be lowered to a minute by toggling on detailed monitoring 
 
 Can create CloudWatch alarms which trigger further notifications 
+
+## AWS Systems Manager ## 
+AWS Systems Manager allows you to manage your EC2 instances at scale 
+
+Can be inside AWS and on-prem 
+
+Integrates with CloudWatch to give you a dashboard of your entire estate. 
