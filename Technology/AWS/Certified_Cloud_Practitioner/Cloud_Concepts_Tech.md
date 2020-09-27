@@ -1,4 +1,4 @@
-# AWS Certified Cloud Partitioner # 
+# Cloud Concepts & Technology # 
 
 ## What is cloud computing? ## 
 
@@ -224,7 +224,7 @@ You are charged for S3 in the following ways:
 Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your end users and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge location. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.  
 
 Main Exam Tips for S3: 
-* YOu can use bucket policies to make entire S3 buckets public 
+* You can use bucket policies to make entire S3 buckets public 
 * You can use S3 to host static websites (such as .html). Websites that require database connections such as Wordpress, etc. cannot be hosted on S3. 
 * S3 scales automatically to meet demand. Many enterprises will put static websites on S3 when they think there are going to be a large number of requests. 
 
