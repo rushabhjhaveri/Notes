@@ -134,3 +134,11 @@ Price determined by:
 * Requests 
 * Data transfer out 
 
+## AWS Budgets vs AWS Cost Explorer ## 
+AWS Budgets gives the ability to set custom budgets that trigger alerts when cost or usage have exceeded a set amount 
+
+Use AWS Budgets to budget costs prior to being incurred 
+
+AWS Cost Explorer is an interface to manage, understand, and visualize AWS costs and usage over time 
+
+Use AWS Cost Explorer to budget costs after they have been incurred 
