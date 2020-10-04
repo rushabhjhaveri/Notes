@@ -184,4 +184,32 @@ Use AWS Cost Explorer to budget costs after they have been incurred
     * If production system down < 1 hour 
     * If business-critical system down  < 15 mins 
 
+## Resource Groups & Tagging ## 
+Tags: key-value pairs attached to AWS resources 
 
+They are metadata [data about data] 
+
+Tags can sometimes be inherited 
+
+Resource groups make it easy to group resources using the tags that are assigned to them 
+
+Resources can be grouped via one or more shared tags 
+
+Resource groups contain information such as: 
+* region 
+* name 
+* employee ID 
+* department 
+
+Tags often contain specific information: 
+* For EC2: public/private IP addresses 
+* For ELB: port configs 
+* For RDS: database engine info, etc 
+
+Tag Editor is a global service that allows for the discovery of resources and to add additional tags to said resources as well 
+
+Newer regions may take some time to be updated and to be compatible with Tag Editor 
+
+Using Resource Groups, can apply automation to resources tagged with specific tags 
+
+Resource Groups in combination with AWS Systems Manager allows for the control of and the ability to execute automation against entire fleets of EC2 instances, all at the push of a button 
