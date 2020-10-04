@@ -213,3 +213,38 @@ Newer regions may take some time to be updated and to be compatible with Tag Edi
 Using Resource Groups, can apply automation to resources tagged with specific tags 
 
 Resource Groups in combination with AWS Systems Manager allows for the control of and the ability to execute automation against entire fleets of EC2 instances, all at the push of a button 
+
+## AWS Organizations & Consolidated Billing ## 
+
+### AWS Organizations ### 
+
+AWS Organizations: account management service that enables the consolidation of multiple AWS accounts into an organization that can be centrally managed 
+
+AWS Organizations is available in the form of two _feature sets_: 
+* Consolidated billing 
+* All features 
+
+Advantages of Consolidated Billing: 
+* One bill per AWS account 
+* Very easy to track changes and allocate costs 
+* Volume pricing discount 
+
+Linked accounts: can only have up to 20 linked accounts per org [this is a soft limit; visit AWS site for expansion form] 
+
+AWS Organizations Best Practices: 
+* Always enable MFA on root account 
+* Always use a strong and complex password on root account 
+* Paying account should b eused for billing purposes only; do not deploy resources into the paying account 
+
+### CloudTrail ### 
+CloudTrail vs CloudWatch: CloudWatch monitors performance, CloudTrail monitors API calls in the AWS platform 
+
+Using CloudTrail with AWS Organizations 
+CloudTrail is a per-AWS-account feature and is enabled per region, so this would have to be enabled for each account in the organization 
+
+Once done, can consolidate logs using an S3 bucket: 
+* Turn on CloudTrail in paying account 
+* Create bucket policy that allows cross-account access 
+* Turn on CloudTrail in the other accounts and use the bucket in the paying account 
+
+Note: The best practice is to use a separate account for logging 
