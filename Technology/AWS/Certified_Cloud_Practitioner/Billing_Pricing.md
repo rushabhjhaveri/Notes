@@ -142,3 +142,46 @@ Use AWS Budgets to budget costs prior to being incurred
 AWS Cost Explorer is an interface to manage, understand, and visualize AWS costs and usage over time 
 
 Use AWS Cost Explorer to budget costs after they have been incurred 
+
+## AWS Support Plans ## 
+### Support Plans ###
+* Basic 
+    * Free 
+    * No tech support 
+    * No TAM 
+    * None can open cases 
+* Developer 
+    * $29/month 
+    * Tech support during business hours or access via email 
+    * No TAM 
+    * One person can open cases / unlimited cases 
+* Business 
+    * $100/month 
+    * 24x7 tech support via email, chat, and phone 
+    * No TAM 
+    * Unlimited contacts can open cases / unlimited cases 
+* Enterprise 
+    * $15000/month 
+    * 24x7 tech support via email, chat, and phone 
+    * TAM 
+    * Unlimited contacts can open cases / unlimited cases 
+
+### Case Severity Response Times ### 
+* Basic 
+    * None 
+* Developer 
+    * General guidance < 24 business hours 
+    * If system impared < 12 business hours 
+* Business 
+    * General guidance < 24 hours 
+    * If system impared < 12 hours 
+    * If production system impaired < 4 hours 
+    * If production system down < 1 hour 
+* Enterprise 
+    * General guidance < 24 hours 
+    * If system impared < 12 hours 
+    * If production system impaired < 4 hours 
+    * If production system down < 1 hour 
+    * If business-critical system down  < 15 mins 
+
+
