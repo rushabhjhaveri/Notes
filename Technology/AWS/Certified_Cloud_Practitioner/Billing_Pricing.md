@@ -248,3 +248,8 @@ Once done, can consolidate logs using an S3 bucket:
 * Turn on CloudTrail in the other accounts and use the bucket in the paying account 
 
 Note: The best practice is to use a separate account for logging 
+
+## AWS QuickStart & Landing Zone ## 
+AWS QuickStart is a way of deploying environments quickly, using CloudFormation templates built by AWS Solutions Architects who are experts in the particular technology 
+
+AWS Landing Zone is a solution that helps customers quickly set up a secure, multi-account AWS environment based on AWS best practices 
