@@ -253,3 +253,16 @@ Note: The best practice is to use a separate account for logging
 AWS QuickStart is a way of deploying environments quickly, using CloudFormation templates built by AWS Solutions Architects who are experts in the particular technology 
 
 AWS Landing Zone is a solution that helps customers quickly set up a secure, multi-account AWS environment based on AWS best practices 
+
+## AWS Calculators ## 
+
+AWS helps compute costs through the use of different calculators 
+
+Available in two feature sets: 
+* AWS Simple Monthly Calculator 
+    * used to calculate running costs on AWS on a per-month basis 
+    * not a comparison tool 
+* AWS Total Cost of Ownership Calculator 
+    * used to compare costs of running infrastructure on premise versus in the AWS Cloud 
+    * generates reports to present to C-level execs to make a business case to move to the cloud 
+
