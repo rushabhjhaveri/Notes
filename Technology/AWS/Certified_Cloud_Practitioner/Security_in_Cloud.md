@@ -23,3 +23,20 @@ Two AWS Shield tiers:
 * advanced 
 
 AWS WAF is designed to stop hackers, AWS Shield is a DDoS mitigation service designed to stop DDoS attacks 
+
+## AWS Inspector vs AWS Trusted Advisor vs CloudTrail ## 
+AWS Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS 
+* Amazon Inspector automatically assesses applications for vulnerabilities and/or deviations from best practices 
+* After performing an assessment, AWS Inspector produces a detailed list of security findings prioritized by level of security 
+* These findings can then be reviewed directly, or as part of detailed assessment reports which are available via the AWS Inspector console or API 
+
+AWS Trusted Advisor is an online resource to help reduce costs, increase performance, and improve security by optimizing one's AWS environment 
+* Trusted Advisor provides real-time guidance to help provision resources following AWS best practices 
+* Advisor will advise on cost optimization, performance, security, fault tolerance 
+* Two types: 
+    * core checks & recommendations 
+    * full trusted advisor - business & enterprise companies only 
+
+AWS CloudTrail increases visibility into user and resource activity by recording AWS Management Console actions and API calls 
+* Can identify which users and accounts were called AWS, the source IP address from which the calls were made, and when the calls occurred 
+
