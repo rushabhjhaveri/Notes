@@ -266,3 +266,4 @@ Available in two feature sets:
     * used to compare costs of running infrastructure on premise versus in the AWS Cloud 
     * generates reports to present to C-level execs to make a business case to move to the cloud 
 
+Note: Go through calculators significantly, they are heavily asked in the exam 
