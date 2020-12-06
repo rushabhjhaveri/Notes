@@ -29,3 +29,24 @@ Notes:
 * New users are assigned _Access Key ID_ and _Secret Access Keys_ when first created 
 * These are NOT the same as a password - access key ID and secret access key cannot be used to login to the console - however, they can be used to access AWS via API's and command line interface 
 * You only get to view these once - if lost, they will need to be regenerated, so save them in a secure location 
+
+## S3 101 ## 
+S3 basics: 
+* S3 is object based i.e., allows one to upload files 
+* Files can be from 0 bytes to 5 TB 
+* There is unlimited storage 
+* Files are stored in buckets 
+* S3 is universal namespace i.e., names must be unique globally 
+* Bucket URL formats: 
+    * https://<bucketname>.s3.amazonaws.com/ 
+    * https://<bucketname>.<region>.amazonaws.com 
+* When uploading a file to S3, will receive an *HTTP 200 code* if upload was successful 
+* Think of objects as files 
+* Objects consist of the following: 
+    * key [name of the object] 
+    * value [the data, made up of a sequence of bytes] 
+    * version ID [important for versioning] 
+    * metadata [data about the data being stored] 
+    * subresources 
+        * access control lists 
+        * torrent 
