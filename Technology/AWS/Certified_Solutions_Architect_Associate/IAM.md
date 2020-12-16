@@ -29,3 +29,20 @@ Notes:
 * New users are assigned _Access Key ID_ and _Secret Access Keys_ when first created 
 * These are NOT the same as a password - access key ID and secret access key cannot be used to login to the console - however, they can be used to access AWS via API's and command line interface 
 * You only get to view these once - if lost, they will need to be regenerated, so save them in a secure location 
+
+## S3 101 ## 
+
+## S3 - The Basics ##
+
+S3 - Simple Storage Service 
+
+Provides developers and IT teams with secure, durable, highly-scalable object storage 
+
+S3 is easy to use, has a simple web interface to store and retrieve any amount of data from anywhere on the web 
+
+Essentially, S3 is a safe place to store files 
+
+Object-based storage 
+
+Data is spread across multiple devices and facilities 
+
