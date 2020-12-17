@@ -1,4 +1,4 @@
-# Identity & Access Management # 
+# Identity & Access Management and S3 # 
 
 IAM allows the management of users and their level of access to the AWS Console 
 
@@ -31,7 +31,6 @@ Notes:
 * You only get to view these once - if lost, they will need to be regenerated, so save them in a secure location 
 
 ## S3 101 ## 
-<<<<<<< HEAD
 
 ## S3 - The Basics ##
 
@@ -47,7 +46,6 @@ Object-based storage
 
 Data is spread across multiple devices and facilities 
 
-=======
 S3 basics: 
 * S3 is object based i.e., allows one to upload files 
 * Files can be from 0 bytes to 5 TB 
@@ -67,4 +65,70 @@ S3 basics:
     * subresources 
         * access control lists 
         * torrent 
->>>>>>> 2af0a5366b01c85d6129ba7ff1e843edcd6317ef
+
+### Data Consistency Model for S3 ### 
+
+Read after write consistency for PUTS of new objects - if you write a new file and read it immediately after, you will be able to view that data 
+
+Eventual consistency for overwrite PUTS and DELETES [can take some time to propagate] - if you update an _existing_ file or delete a file and read it immediately, you may get the older version, or you may not - basically, changes to objects can take a little bit of time to propagate 
+
+### S3 Guarantees ### 
+
+Built for 99.99% availability for the S3 platform 
+
+Amazon guarantees 99.9% availability 
+
+Amazon guarantees 99.999999999% durability for S3 information [remember 11x9's] 
+
+### S3 Features ### 
+
+S3 has the following features available: 
+* Tiered Storage Available 
+* Lifecycle Management 
+* Versioning 
+* Encryption 
+* MFA Delete 
+* Secure Data Using Access Control Lists & Bucket Policies 
+
+### S3 Storage Classes ### 
+
+S3 Standard 
+* 99.99% availability 
+* 99.999999999% durability 
+* Stored redundancy across multiple devices in multiple facilities 
+* Designed to sustain the loss of two facilities concurrently 
+
+S3 - IA 
+* IA -- Infrequently Accessed 
+* For data that is accessed less frequently but requires rapid access when needed 
+* Lower fee than S3 but there is a retrieval fee charged 
+
+S3 One Zone - IA 
+* For when a lower-cost option is desired for infrequently-accessed data, but do not require the multiple AZ data resilience 
+
+S3 - Intelligent Tiering 
+* Designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead 
+
+S3 - Glacier 
+* Secure, durable low-cost storage class for data archiving 
+* Reliably store any amount of data at costs that are competitive with or cheaper than on-premise solutions 
+* Retrieval times configurable from minutes to hours 
+
+S3 - Glacier Deep Archive 
+* S3's lowest-cost storage class where a retrieval time of 12 hours is acceptable 
+
+### S3 - Charges ### 
+
+Charged for S3 in the following ways: 
+* storage 
+* requests 
+* storage management pricing 
+* data transfer pricing 
+* transfer acceleration 
+* cross-region replication pricing 
+
+### S3 Transfer Acceleration ### 
+
+S3 transfer acceleration enables fast, easy, and secure transfer of files over long distances between end-users and an S3 bucket 
+
+Transfer acceleration takes advantage of Amazon CloudFront's globally distributed edge locations; as the data arrives at an edge location, the data is routed to S3 over an optimized network path 

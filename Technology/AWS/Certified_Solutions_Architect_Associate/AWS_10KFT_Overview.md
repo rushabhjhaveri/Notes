@@ -22,4 +22,3 @@ _Edge Locations_ are endpoints for AWS which are used for caching content - typi
 There are many more Edge Locations than Regions 
 
 There are currently over 150 Edge Locations 
-
