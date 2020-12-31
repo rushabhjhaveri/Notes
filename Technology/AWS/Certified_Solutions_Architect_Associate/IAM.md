@@ -132,3 +132,48 @@ Charged for S3 in the following ways:
 S3 transfer acceleration enables fast, easy, and secure transfer of files over long distances between end-users and an S3 bucket 
 
 Transfer acceleration takes advantage of Amazon CloudFront's globally distributed edge locations; as the data arrives at an edge location, the data is routed to S3 over an optimized network path 
+
+## S3 Pricing Tiers ## 
+What makes up the cost of S3: 
+* Storage 
+* Requests & Data Retrievals 
+* Data Transfer 
+* Management & Replication 
+
+S3 Storage Tiers: 
+* S3 Standard 
+* S3 - IA 
+* S3 One Zome - IA 
+* S3 - Intelligent Tiering 
+* S3 Glacier 
+* S3 Glacier Deep Archive 
+
+Understand how to get the best value out of S3 
+
+Often, using S3 Intelligent Tiering will help save costs 
+
+## S3 Security & Encryption ## 
+
+By default, all newly created buckets are _private_ 
+
+Can set up access control to buckets via _bucket policies_ and _access control lists_ 
+
+S3 buckets can be configured to create access logs, which log all requests made to the bucket -- these logs can be sent to another bucket and even to another bucket in another account 
+
+Encryption in transit is achieved by SSL/TLS 
+
+Encryption at rest [server-side encryption, or SSE] is achieved by: 
+* S3 Managed Keys [SSE-S3] 
+* AWS Key Management Service, Managed Keys [SSE-KMS] 
+* Server Side Encryption With Customer Provided Keys [SSE-C] 
+
+Client-Side Encryption 
+
+## S3 Versioning ## 
+
+Using versioning with S3: 
+* stores all versions of an object, including all writes and even if you delete an object 
+* great backup tool 
+* once enabled, *versioning cannot be disabled*; it can only be _suspended_ 
+* integrates with _lifecycle rules_ 
+* comes with MFA-Delete capability, which uses MFA to provide an additional layer of security when performing actions with critical effects 
