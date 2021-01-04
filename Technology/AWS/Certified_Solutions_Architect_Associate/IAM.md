@@ -185,3 +185,23 @@ Automates moving objects between different storage tiers
 Can be used in conjunction with versioning 
 
 Can be applied to current versions as well as previous versions 
+
+## S3 Object Lock and Glacier Vault Lock ## 
+Cam use S3 Object Lock to store objects using a _write once, read many_ [WORM] model 
+
+Helps prevent objects from being deleted or modified for a fixed amount of time or indefinitely 
+
+Can use S3 Object Lock to meet regulatory requirements that require WORM storage, and/or to add an extra layer of protection against object changes and deletion 
+
+S3 Object Lock Modes: 
+* Governance Mode: users can't overwrite or delete an object version or alter its lock settings unless they have special permissions. Protects objects against being deleted by most users, but can still grant some users permission to alter the retention settings or delete the object if necessary 
+* Compliance Mode: a protected object version cannot be overwritten or deleted by any user, including the root user in the AWS account. When an object is locked in compliance mode, its retention mode can't be changed and its retention period can't be shortened. Compliance mode ensures an object version *cannot be overwritten or deleted* for the duration of the retention period 
+
+Retention Period: protects an object version for a fixed amount of time. When a retention period is placed on an object version, S3 stores a timestamp in the object version's metadata to indicate when the retention period expires. After the retention period expires, the object version can be overwritten or deleted unless a legal hold is placed on the object version 
+
+Legal Hold: similar to a retention period, a legal hold prevents an object version from being overwritten or deleted, but they do not have an associated retention period and remains in effect until removed. Legal holds can be freely placed and removed by any user who has the *s3:PutObjectLegalHold* permission 
+
+S3 Glacier Vault Lock allows to easily deploy and enforce compliance controls for individual S3 Glacier vaults with a vault lock policy 
+
+Can specify controls, such as WORM, in a vault lock policy and lock the policy from future edits 
+* Once locked, the policy can no longer be changed 
