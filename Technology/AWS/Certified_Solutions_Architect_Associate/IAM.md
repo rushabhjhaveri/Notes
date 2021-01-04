@@ -177,3 +177,11 @@ Using versioning with S3:
 * once enabled, *versioning cannot be disabled*; it can only be _suspended_ 
 * integrates with _lifecycle rules_ 
 * comes with MFA-Delete capability, which uses MFA to provide an additional layer of security when performing actions with critical effects 
+
+## Lifecycle Management ## 
+
+Automates moving objects between different storage tiers 
+
+Can be used in conjunction with versioning 
+
+Can be applied to current versions as well as previous versions 
