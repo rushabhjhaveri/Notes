@@ -236,3 +236,17 @@ S3 Select enables applications to retrieve only a subset of data from an object 
 By using S3 Select to retrieve only the data needed by the application [instead of the entire data object], can achieve a drastic performance increase - in many cases, can achieve as much as 400% improvement 
 
 Similarly, Glacier Select allows to run SQL queries against Glacier directly 
+
+## AWS Organizations & Consolidated Billing ## 
+AWS Organizations is an account management service that enables the consolidation of multiple AWS accounts into an organization that one can create and centrally manage 
+
+Advantages of Consolidated Billing: 
+* one bill per AWS account 
+* very easy to track charges and allocate costs 
+* volume pricing discount 
+
+Best Practices with AWS Organizations: 
+* always enable MFA on root account 
+* always use a strong and complex password on root account 
+* paying account should be used for billing purposes only; do not deploy resources into the paying account 
+* enable/disable AWS services using Service Control Policies [SCP] either on OUs or on individual accounts 
