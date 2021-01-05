@@ -205,3 +205,26 @@ S3 Glacier Vault Lock allows to easily deploy and enforce compliance controls fo
 
 Can specify controls, such as WORM, in a vault lock policy and lock the policy from future edits 
 * Once locked, the policy can no longer be changed 
+
+## S3 Performance ## 
+S3 Prefix: part of full S3 path between bucket name and filename 
+
+S3 has extremely low latency - can get the first byte out of S3 within 100-200 milliseconds 
+
+Can also achieve a high number of requests - 3500 PUT/COPY/POST/DELETE and 5500 GET/HEAD requests per second per prefix 
+
+Can get better performance by spreading your reads _across different prefixes_ 
+
+S3 limitations when using KMS: 
+* if using SSE-KMS to encrypt objects in S3, then must keep in mind KMS limits 
+* when uploading a file, the _GenerateDataKey_ call is made to the KMS API 
+* When downloading a file, the _Decrypt_ call is made to the KMS API 
+* Uploading/downloading will count towards the KMS quota 
+* Region-specific, however, the KMS quota is usually 5500, 10000, or 30000 requests per second 
+* Currently, cannot request a quota increase 
+
+Multipart Uploads - enables parallelizing uploads to increase efficiency; recommended for files over 100 MB, required for files over 5GB 
+
+S3 Byte-Range Fetches - enables parallelizing downloads by specifying byte ranges; if there's a failure in the download, it's only for a specific byte range 
+* Can be used to speed up downloads 
+* Can be used to just download partial amounts of file [e.g., header info]
