@@ -250,3 +250,22 @@ Best Practices with AWS Organizations:
 * always use a strong and complex password on root account 
 * paying account should be used for billing purposes only; do not deploy resources into the paying account 
 * enable/disable AWS services using Service Control Policies [SCP] either on OUs or on individual accounts 
+
+## Sharing S3 Buckets Across Accounts ## 
+S3 - Cross-Account Access 
+
+Three different ways to share S3 buckets  across accounts: 
+* using bucket policies & IAM [applies across the entire bucket] -- programmatic access only 
+* using bucket ACLs & IAM [individual objects] -- programmatic access only 
+* cross-account IAM roles -- programmatic and console access 
+
+## Cross Region Replication ## 
+Versioning must be enabled on both the source and destination buckets 
+
+Files in an existing bucket are not replicated automatically 
+
+All subsequent updated files will be replicated automatically 
+
+Delete markers are not replicated 
+
+Deleting individual versions or delete markers will not be replicated 
