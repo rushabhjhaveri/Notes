@@ -227,4 +227,12 @@ Multipart Uploads - enables parallelizing uploads to increase efficiency; recomm
 
 S3 Byte-Range Fetches - enables parallelizing downloads by specifying byte ranges; if there's a failure in the download, it's only for a specific byte range 
 * Can be used to speed up downloads 
-* Can be used to just download partial amounts of file [e.g., header info]
+* Can be used to just download partial amounts of file [e.g., header info] 
+
+## S3 Select & Glacier Select ## 
+
+S3 Select enables applications to retrieve only a subset of data from an object using simple SQL expressions 
+
+By using S3 Select to retrieve only the data needed by the application [instead of the entire data object], can achieve a drastic performance increase - in many cases, can achieve as much as 400% improvement 
+
+Similarly, Glacier Select allows to run SQL queries against Glacier directly 
