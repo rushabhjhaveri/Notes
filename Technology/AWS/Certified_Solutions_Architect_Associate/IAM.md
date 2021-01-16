@@ -1,5 +1,7 @@
 # Identity & Access Management and S3 # 
 
+## IAM ## 
+
 IAM allows the management of users and their level of access to the AWS Console 
 
 IAM offers the following features: 
@@ -13,7 +15,7 @@ IAM offers the following features:
 * integrates with many different AWS services 
 * supports PCI DSS compliance 
 
-## Key Terminology for IAM ## 
+### Key Terminology for IAM ### 
 Users: end-users, such as people, employees of an organization, etc. 
 
 Groups: a collection of users with each user in the group inheriting the permissions of the group 
@@ -32,7 +34,7 @@ Notes:
 
 ## S3 101 ## 
 
-## S3 - The Basics ##
+### S3 - The Basics ###
 
 S3 - Simple Storage Service 
 
@@ -66,13 +68,13 @@ S3 basics:
         * access control lists 
         * torrent 
 
-### Data Consistency Model for S3 ### 
+#### Data Consistency Model for S3 #### 
 
 Read after write consistency for PUTS of new objects - if you write a new file and read it immediately after, you will be able to view that data 
 
 Eventual consistency for overwrite PUTS and DELETES [can take some time to propagate] - if you update an _existing_ file or delete a file and read it immediately, you may get the older version, or you may not - basically, changes to objects can take a little bit of time to propagate 
 
-### S3 Guarantees ### 
+#### S3 Guarantees #### 
 
 Built for 99.99% availability for the S3 platform 
 
@@ -80,7 +82,7 @@ Amazon guarantees 99.9% availability
 
 Amazon guarantees 99.999999999% durability for S3 information [remember 11x9's] 
 
-### S3 Features ### 
+#### S3 Features #### 
 
 S3 has the following features available: 
 * Tiered Storage Available 
@@ -90,7 +92,7 @@ S3 has the following features available:
 * MFA Delete 
 * Secure Data Using Access Control Lists & Bucket Policies 
 
-### S3 Storage Classes ### 
+#### S3 Storage Classes #### 
 
 S3 Standard 
 * 99.99% availability 
@@ -117,7 +119,7 @@ S3 - Glacier
 S3 - Glacier Deep Archive 
 * S3's lowest-cost storage class where a retrieval time of 12 hours is acceptable 
 
-### S3 - Charges ### 
+#### S3 - Charges #### 
 
 Charged for S3 in the following ways: 
 * storage 
@@ -127,13 +129,13 @@ Charged for S3 in the following ways:
 * transfer acceleration 
 * cross-region replication pricing 
 
-### S3 Transfer Acceleration ### 
+#### S3 Transfer Acceleration #### 
 
 S3 transfer acceleration enables fast, easy, and secure transfer of files over long distances between end-users and an S3 bucket 
 
 Transfer acceleration takes advantage of Amazon CloudFront's globally distributed edge locations; as the data arrives at an edge location, the data is routed to S3 over an optimized network path 
 
-## S3 Pricing Tiers ## 
+### S3 Pricing Tiers ### 
 What makes up the cost of S3: 
 * Storage 
 * Requests & Data Retrievals 
@@ -152,7 +154,7 @@ Understand how to get the best value out of S3
 
 Often, using S3 Intelligent Tiering will help save costs 
 
-## S3 Security & Encryption ## 
+### S3 Security & Encryption ### 
 
 By default, all newly created buckets are _private_ 
 
@@ -169,7 +171,7 @@ Encryption at rest [server-side encryption, or SSE] is achieved by:
 
 Client-Side Encryption 
 
-## S3 Versioning ## 
+### S3 Versioning ### 
 
 Using versioning with S3: 
 * stores all versions of an object, including all writes and even if you delete an object 
@@ -178,7 +180,7 @@ Using versioning with S3:
 * integrates with _lifecycle rules_ 
 * comes with MFA-Delete capability, which uses MFA to provide an additional layer of security when performing actions with critical effects 
 
-## Lifecycle Management ## 
+### Lifecycle Management ### 
 
 Automates moving objects between different storage tiers 
 
@@ -186,7 +188,7 @@ Can be used in conjunction with versioning
 
 Can be applied to current versions as well as previous versions 
 
-## S3 Object Lock and Glacier Vault Lock ## 
+### S3 Object Lock and Glacier Vault Lock ### 
 Cam use S3 Object Lock to store objects using a _write once, read many_ [WORM] model 
 
 Helps prevent objects from being deleted or modified for a fixed amount of time or indefinitely 
@@ -206,7 +208,7 @@ S3 Glacier Vault Lock allows to easily deploy and enforce compliance controls fo
 Can specify controls, such as WORM, in a vault lock policy and lock the policy from future edits 
 * Once locked, the policy can no longer be changed 
 
-## S3 Performance ## 
+### S3 Performance ### 
 S3 Prefix: part of full S3 path between bucket name and filename 
 
 S3 has extremely low latency - can get the first byte out of S3 within 100-200 milliseconds 
@@ -229,7 +231,7 @@ S3 Byte-Range Fetches - enables parallelizing downloads by specifying byte range
 * Can be used to speed up downloads 
 * Can be used to just download partial amounts of file [e.g., header info] 
 
-## S3 Select & Glacier Select ## 
+### S3 Select & Glacier Select ### 
 
 S3 Select enables applications to retrieve only a subset of data from an object using simple SQL expressions 
 
@@ -237,7 +239,7 @@ By using S3 Select to retrieve only the data needed by the application [instead 
 
 Similarly, Glacier Select allows to run SQL queries against Glacier directly 
 
-## AWS Organizations & Consolidated Billing ## 
+### AWS Organizations & Consolidated Billing ### 
 AWS Organizations is an account management service that enables the consolidation of multiple AWS accounts into an organization that one can create and centrally manage 
 
 Advantages of Consolidated Billing: 
@@ -251,7 +253,7 @@ Best Practices with AWS Organizations:
 * paying account should be used for billing purposes only; do not deploy resources into the paying account 
 * enable/disable AWS services using Service Control Policies [SCP] either on OUs or on individual accounts 
 
-## Sharing S3 Buckets Across Accounts ## 
+### Sharing S3 Buckets Across Accounts ### 
 S3 - Cross-Account Access 
 
 Three different ways to share S3 buckets  across accounts: 
@@ -259,7 +261,7 @@ Three different ways to share S3 buckets  across accounts:
 * using bucket ACLs & IAM [individual objects] -- programmatic access only 
 * cross-account IAM roles -- programmatic and console access 
 
-## Cross Region Replication ## 
+### Cross Region Replication ### 
 Versioning must be enabled on both the source and destination buckets 
 
 Files in an existing bucket are not replicated automatically 
@@ -269,3 +271,81 @@ All subsequent updated files will be replicated automatically
 Delete markers are not replicated 
 
 Deleting individual versions or delete markers will not be replicated 
+
+### S3 Transfer Acceleration ### 
+S3 Transfer Acceleration utilizes the CloudFront Edge Network to accelerate uploads to S3. 
+
+Instead of uploading directly to an S3 bucket, one can use a distinct URL to upload directly to an edge location which will then transfer that file to S3 
+
+Will get a distinct URL to upload to: e.g., acloudguru.s3-accelerate.amazonaws.com 
+
+### AWS DataSync ### 
+Basically allows one to move large amounts of data into AWS 
+
+Typically used in an on-prem environment [a DataSync Agent is deployed] and automatically encrypts data and accelerates transfer over the WAN 
+
+Seamlessly and securely connects to Amazon S3/EFS/FSx to copy data and metadata to and from AWS 
+
+Performs automatic data integrity checks on data in-transit and at rest as well 
+
+Used with NFS and SMB-compatible file systems 
+
+Can also be used to replicate EFS to EFS 
+
+Replication can be done hourly, daily, or weekly 
+
+### CloudFront ### 
+CloudFront is a content delivery network [CDN] 
+
+A CDN is a system of distributed servers [network] that delivers webpages and other web content to a user based on the geographic location of the user, the origin of the webpage, and a content delivery server 
+
+#### CloudFront - Key Terminology #### 
+Edge Location: this is the location where the content will be cached; separate to an AWS Region/AZ 
+
+Origin: this is the location of all the files that the CDN will distribute - can be an S3 Bucket, an EC2 Instance, an Elastic Load Balancer, or Route53 
+
+Distribution: this is the name given the CDN which consists of a collection of Edge Locations 
+
+Web Distribution: typically used for websites 
+
+RTMP: used for media streaming 
+
+#### Additional Notes #### 
+
+Items stored in Edge Location are cached for the Time to Live [TTL] duration specified [a configurable item] 
+
+TTL is measured in seconds 
+
+CloudFront can be used to deliver an entire website, including dynamic, static, streaming, and interactive content using a global network of edge locations 
+
+Requests for content are routed to the nearest edge location, so content is delivered with the best possible performance 
+
+Edge Locations are not just read-only - can write to them too [i.e., put an object on to them] 
+
+Can clear cached objects, but will be charged 
+
+### CloudFront Signed URLs & Cookies ### 
+
+#### URLs vs. Cookies #### 
+Use CloudFront Signed URLs or Signed Cookies 
+
+A signed URLis for individual files - 1 URL = 1 file  
+
+A signed cookie is for multiple files - 1 cookie = multiple files 
+
+#### Signed Cookie/URL Policies #### 
+When creating a signed URL or signed cookie, a policy is attached 
+
+Policy can include: 
+* URL expiration 
+* IP ranges 
+* Trusted signers [which AWS accounts can create singed URLs] 
+
+#### CloudFront Signed URL Features #### 
+Can have different origins, does not have to be EC2 
+
+Key-pair is account-wide and managed by the root user 
+
+Can utilize caching features 
+
+Can filter by date, path, IP address, expiration, etc. 
