@@ -349,3 +349,38 @@ Key-pair is account-wide and managed by the root user
 Can utilize caching features 
 
 Can filter by date, path, IP address, expiration, etc. 
+
+#### S3 Signed URL Features #### 
+
+Issues a request as the IAM user who creates the pre-signed URL 
+
+Limited lifetime 
+
+### Snowball ### 
+Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS 
+
+Using Snowball addresses common challenges that accompany large-scale data transfers, including high network costs, long transfer times, and security concerns 
+
+Transferring data with Snowball is simple, fast, secure, and can be as little as one-fifth the cost of high-speed internet 
+
+Snowball comes in either a 50 TB or an 80 TB size 
+
+Snowball uses multiple layers of security designed to protect data including tamper-resistant enclosures, 256-bit encryption, and an industry-standard Trusted Platform Module [TPM] designed to ensure both security and full chain-of-custody of the data 
+
+Once the data transfer job has been processed and verified, AWS performs a software erasure of the Snowball appliance 
+
+#### Snowball Edge #### 
+100 TB data transfer device with on-board storage and compute capabilities; can be used to move large amounts of data into and out of AWS, as a temporary storage tier for large local datasets, or to support local workloads in remote or offline locations 
+
+Connects to existing applications and infrastructure using standard storage interfaces, streamlining the data transfer process and minimizing setup and integration 
+
+Snowball Edge can cluster together to form a local storage tier and process data on-premise, helping ensure applications continue to run even when they are unable to access the cloud 
+
+#### Snowmobile #### 
+Exabyte-scale data transfer service used to move extremely large amounts of data to AWS 
+
+Can transfer up to 100 PB per Snowmobile, a 45-foot long ruggedized shopping container, pulled by a semi-trailer truck 
+
+Makes it easy to move massive volumes of data to the cloud, including video libraries, image repositories, or even complete data center migration 
+
+Transferring data with Snowmobile is secure, fast, and cost-effective 
