@@ -384,3 +384,71 @@ Can transfer up to 100 PB per Snowmobile, a 45-foot long ruggedized shopping con
 Makes it easy to move massive volumes of data to the cloud, including video libraries, image repositories, or even complete data center migration 
 
 Transferring data with Snowmobile is secure, fast, and cost-effective 
+
+### Storage Gateway ### 
+AWS Storage Gateway is a service that connects on-premise software appliances with cloud-based storage to provide seamless and secure integration between an organization's on-premise IT environment and AWS' storage infrastructure 
+
+The service enables the secure storage of data to the AWS cloud for scalable and cost-effective storage 
+
+Storage Gateway's software appliance is available for download as a virtual machine [VM] image that is installed on a host in a datacenter 
+* supports either VMWare ESXi of Microsoft HyperV 
+* once the gateway has been installed, and has been associated with the AWS account via the activation process, the AWS Management Console can be used to create the appropriate storage gateway option 
+
+#### Storage Gateway Types #### 
+File Gateway: NFS and SMB 
+* Files are stored as objects in S3 buckets, accessed through a Network File System [NFS] mount point 
+* Ownership, permissions, and timestamps are durably stored in S3 in the user-metadata of the object associated with the file 
+* Once objects are transferred to S3, they can be managed as native S3 objects, and bucket policies such as versioning,  lifecycle management, and cross-region replication apply directly to objects stored in the buckets 
+
+Volume Gateway - iSCSI  
+* The volume interface presents applications with disk volumes using the iSCSI block protocol 
+* Data written to these volumes can be asynchronously backed up as point-in-time snapshots of volumes, and stored in the cloud as Amazon EBS snapshots 
+* Snapshots are incremental backups that capture only changed blocks; all snapshot storage is also compressed to minimize storage charges 
+* Stored volumes 
+    * Enables the storage of primary data locally, while asynchronously backing up said data to AWS 
+    * Provide on-prem applications with low-latency access to their entire datasets, while providing durable, off-site backups 
+    * Can create storage volumes and mount them as iSCSI devices from on-prem application servers 
+    * Data written to stored volumes is stored on on-prem storage hardware 
+    * This data is then asynchronously backed up to AWS S3 in the form of Elastic Block Store [EBS] snapshots 
+    * 1 GB - 16 TB in size for stored volumes 
+* Cached volumes 
+    * Enables the usage of S3 as primary data storage while retaining frequently accessed data locally in the storage gateway 
+    * Minimize the need to scale on-prem storage infrastructure, while still providing applications with low-latency access to their frequently accessed data 
+    * Can create storage volumes up to 32 TB in size and attach to them as iSCSI devices from on-prem application servers 
+    * Gateway stores data that are written to these volumes in S3 and retains recently read data in on-prem storage gateway's cache and upload buffer storage 
+    * 1 GB - 32 TB in size for cached volumes 
+
+Tape Gateway - VTL 
+* Offers durable, cost-effective solution to archive data in the AWS Cloud 
+* Virtual Tape Libraray [VTL] interface it provides allows for the leveraging of existing tape-based backup application infrastructure to store data on virtual tape cartridges that can be created on the tape gateway 
+* Each tape gateway is preconfigured with a media changer and tape drives, which are available to existing client backup applications as iSCSI devices 
+* Add tape cartridges as needed to archive data 
+* Supported by NetBackup, Backup Exec, Veeam, etc. 
+
+### Athena vs. Macie ### 
+#### Athena #### 
+Interactive query service which enables the analysis and querying of data stored in S3 using standard SQL 
+* Serverless, nothing to provision, pay per query/ per TB scanned 
+* No need to set up complex Extract, Transform, Load [ETL] processes 
+* Works directly with data stored in S3 
+
+Use cases: 
+* Can be used to query log files stored in S3, e.g., ELB logs, S3 access logs, etc. 
+* Generate business reports on data stored in S3 
+* Analyze AWS cost and usage reports 
+* Run queries on click-stream data 
+
+#### Macie #### 
+Personally Identifiable Information [PII]: 
+* Personal data used to establish an individual's identity 
+* This data can be exploited by criminals, used in identity theft and financial fraud 
+* Home address, email address, SSN 
+* Passport Number, driver's license number 
+* DOB, phone number, bank account number, credit card number 
+
+Macie is a security service which uses machine learning and natural language processing [NLP] to discover, classify, and protect sensitive data stored in S3 
+* Uses AI to recognize if S3 objects contain sensitive data such as PII 
+* Dashboards, reporting, and alerts 
+* Works directly with data stored in S3 
+* Can also analyze CloudTrail logs 
+* Great for PCI-DSS and preventing ID theft 
