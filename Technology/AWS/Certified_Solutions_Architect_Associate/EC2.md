@@ -305,3 +305,12 @@ Can identify which users and accounts called AWS, the source IP from which the c
 CloudWatch monitors performance 
 
 CloudTrail monitors API calls in the AWS platform 
+
+## IAM Roles ## 
+Roles are more secure thatn storing access key and secret access key on individual EC2 instances 
+
+Roles are easier to manage 
+
+Roles can be assigned to an EC2 instance after it is created using both the console and the command line 
+
+Roles are universal - can be used in any region 
