@@ -314,3 +314,29 @@ Roles are easier to manage
 Roles can be assigned to an EC2 instance after it is created using both the console and the command line 
 
 Roles are universal - can be used in any region 
+
+## Instance Metadata ## 
+Used to get information about an instance [such as public IP] 
+
+curl http://169.254.169.254/latest/meta-data 
+
+curl http://169.254.169.254/latest/user-data 
+
+## EFS ## 
+Amazon Elastic File System [EFS] is a file storage service for Elastic Compute Cloud [EC2] instances 
+
+EFS is easy to use and provides a simple interface that allows for the creation and configuration of file systems quickly and easily 
+
+With EFS, storage capacity is elastic; growing and shrinking automatically as files are added/removed, so applications have the storage they need, when they need it 
+
+Supports the Network File System version 4 [NFSv4] protocol 
+
+Only pay for the storage used [no pre-provisioning required] 
+
+Can scale up to the petabytes 
+
+Can support thousands of concurrent NFS connections 
+
+Data is stored across multiple AZ's within a region 
+
+Read after write consistency 
