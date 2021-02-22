@@ -340,3 +340,152 @@ Can support thousands of concurrent NFS connections
 Data is stored across multiple AZ's within a region 
 
 Read after write consistency 
+
+## Amazon FSx for Windows and Lustre ## 
+### FSx for Windows ### 
+FSx for Windows File Server provides a fully managed native Microsoft Windows file system so Windows-based applications that require file storage can easily be moved to AWS 
+
+Amazon FSx is built on Windows Server 
+
+### Windows FSx vs EFS ### 
+Windows FSx: 
+* A managed Windows Server that runs Windows Server Message Block [SMB]-based file services 
+* Designed for Windows and Windows applications 
+* Supports AD users, access control lists, group and security policies, along with Distributed File System [DFS] namespaces and replication 
+
+EFS: 
+* A managed NAS filer for EC2 instances based on NFSv4 
+* One of the first network file sharing protocols native to Unix and Linux 
+
+### FSx for Lustre ### 
+FSx for Lustre is a fully managed file system that is optimized for compute-intensive workloads, such as high-performance computing, machine learning, media data processing workflows, and electronic design automation [EDA] 
+
+With FSx, can launch and run a Lustre file system that can process massive data sets at up to hundreds of gigabytes per second of throughput, millions of IOPS, and sub-millisecond latencies 
+
+### Lustre FSx vs EFS ### 
+
+Lustre FSx: 
+* Designed specifically for fast processing of workloads such as machine learning, high performance computing [HPC], video processing, financial modelling, and electronic design automation [EDA] 
+* Allows for the launch and running of a file system that provides sub-millisecond access to data and allows for the read and writing of data at speeds of up to hundreds of gigabytes per second of throughput and millions of IOPS 
+
+EFS: 
+* A managed NAS filer for EC2 instances based on NFSv4 
+* One of the first network file sharing protocols native to Unix and Linux 
+
+### Notes ### 
+In the exam, will be given different scenarios and will be asked to choose whether to use EFS, FSx for Windows, or FSx for Lustre 
+
+EFS: when the need is distributed, highly resilient storage for Linux instances and Linux-based applications 
+
+FSx for Windows: when the need is centralized storage for Windows-based applications such as Sharepoint, Microsoft SQL Server, IIS Web Server, or any other native Microsoft application 
+
+FSx for Lustre: when the need is high-speed, high-capacity distributed storage; this will be for applications that do high performance compute [HPC], financial modelling, etc. 
+
+Remember that FSx for Lustre can store data directly on S3 
+
+## EC2 Placement Groups ## 
+Three types of placement groups: 
+* Clustered placement group 
+    * Grouping of instances within a single AZ 
+    * Placement groups are recommended for applications that need low network latency, high network throughput, or both 
+    * Only certain instances can be launched into a clustered placement group 
+* Spread placement group 
+    * Group of instances that are each placed on distinct underlying hardware 
+    * Recommended for applications that have a small number of critical instances that should be kept separate from each other 
+    * Think individual instances 
+    * Can span multiple AZs 
+* Partitioned 
+    * When using partitioned placement groups, EC2 divides each group into logical segments called partitions 
+    * EC2 ensures each partition within a placement group has its own set of racks 
+    * Each rack has its own network and power source 
+    * No two partitions within a placement group share the same racks, allowing for the isolation of the impact of hardware failure within the application 
+    * Think multiple instances 
+    * Can span multiple AZs 
+
+The name specified for a placement group must be unique within the AWS account 
+
+Only certain types of instances can be launched in a placement group [Compute Optimized, GPU, Memory Optimized, Storage Optimized] 
+
+AWS recommends homogeneous instances within clustered placement groups 
+
+Can't merge placement groups 
+
+Can move an existing instance into a placement group - before moving the instance, the instance must be in the stopped state 
+
+Can move or remove an instance using the AWS CLI or an AWS SDK, but not via the console [yet] 
+
+## HPC on AWS ## 
+It's never been easier to get started with high-performance computing [HPC] than in any other time in history - and AWS is the perfect place to perform it 
+
+Can create large number of resources in almost no time - only pay for the resources used, and once finished, can destroy the resources 
+
+HPC is used for industries like genomics, finance and financial risk modelling, machine learning, weather prediction, and even autonomous driving 
+
+Different services that can be used to achieve HPC on AWS: 
+* Data transfer [getting data into AWS]
+    * Snowball, Snowmobile [terabytes/petabytes worth of data] 
+    * AWS DataSync to store on S3, EFS, FSx for Windows, etc. 
+    * Direct Connect 
+        * A cloud service solution that makes it easy to establish a dedicated network connection from on-prem to AWS 
+        * Using AWS Direct Connect, can establish private connectivity between AWS and the data center, office, or colocation environment; which, in many cases, can reduce network costs, increase bandwidth throughput, and provide a more consistent network experience than internet-based connections 
+* Compute and networking 
+    * EC2 instances that are GPU or CPU optimized 
+    * EC2 fleets [Spot instances or Spot fleets]
+    * Placement groups [cluster placement groups] 
+    * Enhanced networking 
+        * It uses single root I/O virtualization [SR-IOV] to provide high-performance network capabilities on supported instance types 
+        * SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces 
+        * Provides higher bandwidth, higher packet per second [PPS] performance,and consistently lower inter-instance latencies 
+        * There is no additional charge for using enhanced networking 
+        * Use where good network performance is desired 
+    * Elastic Network Adapters 
+        * Supports network speeds of upto 100 gigabits per second, for supported instance types 
+        * Also have the Intel 82599 virtual function or VF interface and this is a legacy product - supports network speeds of up to 10 gigabits per second for supported instance types and it's typically used on older instances 
+    * Elastic Fabric Adapters 
+        * Network device that can be attached to EC2 instances to accelerate HPC and machine learning applications 
+        * Provides lower, more consistent latency and higher throughput than the TCP transport traditionally used in cloud-based HPC systems 
+        * Can use OS-bypass, which enables HPC and machine learning applications to bypass the OS kernel and communicate directly with the EFA device 
+        * Makes it a lot faster with much lower latency 
+        * Currently not supported with Windows, only Linux 
+* Storage 
+    * Instance-attached storage: 
+        * EBS: scale up to 64000 IOPS with Provisioned IOPS [PIOPS] 
+        * Instance Store: scale to millions of IOPS; low latency 
+    * Network storage: 
+        * S3: distributed object-based storage; not a file system 
+        * EFS: scale IOPS based on total size; or use Provisioned IOPS 
+        * FSx for Lustre: HPC-optimized distributed file system; millions of IOPS, which is also backed by S3 
+* Orchestration and automation 
+    * AWS Batch 
+        * Enables developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs on AWS 
+        * Supports multi-node parallel jobs, which allows one to run a single job that spans multiple EC2 instances 
+        * Can easily schedule jobs and launch EC2 instances as needed 
+    * AWS ParallelCluster 
+        * Open-source cluster management tool that makes it easier to deploy and manage HPC clusters on AWS 
+        * Uses a simple text file to model and provision all the resources needed for HPC applications in an automated and secure model 
+        * Automate creation of VPC, subnet, cluster type, and instance types 
+
+## AWS WAF ## 
+AWS WAF is a web application firewall that allows for the monitoring of HTTP and HTTPS requests that are forwarded to CloudFront, an ALB, or API Gateway 
+
+AWS WAF also allows for controlling access to content 
+
+Layer 7 network firewall 
+
+Can configure conditions such as what IP addresses are allowed to make this request or what query string parameters need to be passed for the request to be allowed 
+
+Then the ALB or CloudFront or API Gateway will either allow this content to be received or to give an HTTP 403 status code 
+
+At its most basic level, AWS WAF allows three different behaviors: 
+* allow all requests except the ones specified 
+* block all requests except the ones specified 
+* count the requests that match the properties specified 
+
+Extra protection against web attacks using conditions specified - can define conditions by using characteristics of web requests such as: 
+* IP addresses that requests originate from 
+* Country that requests originate from 
+* Values in request headers 
+* Strings that appear in requests, either specific strings or strings that match regular expression [regex] patterns 
+* Length of requests 
+* Presence of SQL code that is likely to be malicious [known as SQL injection] 
+* Presence of a script that is likely to be malicious [known as cross-site scripting] 
