@@ -81,3 +81,23 @@ Read Replica: allow to have a read-only copy of production database - achieved b
 * Can create read replicas of multi-AZ source databases 
 * Read replicas can be promoted to be their own databases - this breaks the replication 
 * Can have a read replica in a second region 
+
+## DynamoDB ## 
+Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale 
+
+It is a fully-managed database and supports both document and key-value data models 
+
+Its flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, IoT, and many other applications 
+
+The basics of DynamoDB are as follows: 
+* Stored on SSD storage 
+* Spread across three geographically distinct data centers 
+* Eventual consistent reads [default] 
+* Strongly consistent reads 
+
+Eventual consistent reads: 
+* Consistency across all copies of data is usually reached within a second 
+* Repeating a read after a short time should return the updated data [best read performance] 
+
+Strongly consistent reads: 
+* Returns a result that reflects all writes that received a successful response prior to the read 
