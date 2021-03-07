@@ -1,6 +1,8 @@
 # Databases on AWS # 
 
 ## Databases 101 ## 
+
+### RDS ### 
 Relational databases - the most common type of database 
 
 Think of a relational database to be like a spreadsheet: a table composed of rows and columns [fields] 
