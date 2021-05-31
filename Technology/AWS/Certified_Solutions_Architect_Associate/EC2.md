@@ -57,7 +57,7 @@ All outbound traffic is allowed
 
 Changes to Security Groups take effect immediately 
 
-Can have any number of EC2 instancesz within a security group 
+Can have any number of EC2 instances within a security group 
 
 Can have multiple security groups attached to EC2 instances 
 
@@ -156,7 +156,7 @@ By default, both ROOT volumes will be deleted on termination; however, with EBS 
 
 ## ENI vs ENA vs EFA ## 
 ENI: Elastic Network Interface - essentially, a virtual network card 
-* Virtual netowrk card for EC2 instances 
+* Virtual network card for EC2 instances 
 * It allows: 
     * a primary private IPv4 address from the IPv4 address range of the VPC 
     * one or more secondary private IPv4 addresses from the IPv4 address range of the VPC 
@@ -307,7 +307,7 @@ CloudWatch monitors performance
 CloudTrail monitors API calls in the AWS platform 
 
 ## IAM Roles ## 
-Roles are more secure thatn storing access key and secret access key on individual EC2 instances 
+Roles are more secure than storing access key and secret access key on individual EC2 instances 
 
 Roles are easier to manage 
 

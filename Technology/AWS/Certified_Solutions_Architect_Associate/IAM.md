@@ -329,7 +329,7 @@ Can clear cached objects, but will be charged
 #### URLs vs. Cookies #### 
 Use CloudFront Signed URLs or Signed Cookies 
 
-A signed URLis for individual files - 1 URL = 1 file  
+A signed URL is for individual files - 1 URL = 1 file  
 
 A signed cookie is for multiple files - 1 cookie = multiple files 
 

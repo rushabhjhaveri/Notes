@@ -241,4 +241,4 @@ Operates over the public internet; but all traffic between customer gateway and 
 ## AWS Network Costs ## 
 Use private IP addresses over public IP addresses to save on costs - this then utilizes the AWS backbone network 
 
-To cut all netowrk costs, group EC2 instances in the same AZ and use private IP addresses - this will be cost-free, but keep in mind single-point-of-failure issues 
+To cut all network costs, group EC2 instances in the same AZ and use private IP addresses - this will be cost-free, but keep in mind single-point-of-failure issues 

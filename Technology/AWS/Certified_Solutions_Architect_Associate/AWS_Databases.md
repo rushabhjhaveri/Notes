@@ -41,7 +41,7 @@ RDS runs on virtual machines, however, cannot log into these operating systems
 
 Patching of the RDS OS and DB is Amazon's responsibility 
 
-RDA is NOT serverless [however, Aurora Serverless is Serverless] 
+RDS is NOT serverless [however, Aurora Serverless is Serverless] 
 
 ## RDS - Backups, Multi-AZ, & Read Replicas ## 
 There are two different types of backups for RDS: 
@@ -216,7 +216,7 @@ Redshift availability:
 ## Aurora ## 
 Aurora is a MySQL and PostgreSQL-compatible relational database engine that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases 
 
-Aurora provides up to give times better performance than MySQL and three times better than PostgreSQL databases at a much lower price point, whilst delivering similar performance and availability 
+Aurora provides up to five times better performance than MySQL and three times better than PostgreSQL databases at a much lower price point, whilst delivering similar performance and availability 
 
 Things to know about Aurora: 
 * Start with 10GB, scales in 10GB increments to 64TB [storage autoscaling] 
