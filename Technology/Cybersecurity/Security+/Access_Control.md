@@ -83,3 +83,32 @@ User Access Recertification: Process where each user's rights and permissions ar
 
 ## Permissions ## 
 
+Permissions are inherited by default from the parent when a new folder is created 
+
+Any permissions added/removed from the parent folder will pass to the child by default too 
+
+Propagation: Occurs when permissions are passed to a subfolder from the parent through inheritance 
+
+Use Groups for roles and do not assign users directly to a folder's permissions 
+
+When copying a folder, permissions are inherited from the parent folder it's copied into 
+
+When moving a folder, permissions are retained from it's original permissions 
+
+## Usernames and Passwords ## 
+
+Strong Passwords: Contain uppercase letters, lowercase letters, numbers, special characters, and at least 8 characters or more [preferably 14 or more] 
+* Always require the user to change the default password when the account is created 
+* Require that the password is changed frequently [every 90 days] 
+* Always change the default administrator or root password 
+* Disable the guest account on systems 
+* Enable ctrl+alt+del for logging into the system 
+* Use good, strong policies in regards to passwords 
+
+## User Account Control ## 
+
+User Account Control [UAC]: A security component in Windows that keeps every user in standard user mode instead of acting like an administrative user [ony exception is the Administrator account] 
+* Eliminates unnecessary admin-level requests for Windows resources 
+* Reduces risk of malware using admin-level privileges to cause system issues 
+
+UAC can be disabled from the control panel 
