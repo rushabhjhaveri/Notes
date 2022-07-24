@@ -72,4 +72,42 @@ Procedures: Detailed, step-by-step instructions that are created to ensure perso
 
  ## PII and PHI ## 
 
- 
+ It is corporate responsibility to protect the data collected 
+
+ Personal Identifiable Information [PII]: A piece of data that can be used either by itself or in combination with some other pieces of data to identify a single person 
+
+ Verify with legal team what is considered PII 
+
+ Privacy Act of 1974: Affects U.S. government computer systems that collect, store, use, or disseminate PII 
+
+ Health Insurance Portability and Accountability Act [HIPAA]: Affects healthcare providers, facilities, insurance companies, and medical data clearing houses 
+
+ Sarbanes-Oxley [SOX]: Affects publicly-traded U.S. corporations and requires certain accounting methods and financial reporting requirements 
+
+ Gramm-Leach-Bliley Act [GLBA]: Affects banks, mortgage companies, loan officies, insurance companies, investment companies, and credit card providers 
+
+ Federal Information Security Management [FISMA] Act of 2002: Requires each agency to develop, document, and implement agency-wide information systems security program to protect their data 
+
+ Payment Card Industry Data Security Standard [PCI DSS] is a contractual obligation 
+
+ Help America Vote Act [HAVA] of 2002: Provides regulations that govern the security, confidentiality, and integrity of the personal information collected, stored, or processed during the election and voting process 
+
+ SB 1386 requires any business that stores personal data to disclose a breach 
+
+ ## Legal Requirements ## 
+
+ Any type of information or asset should consider how a compromise of that information can threaten the three core security attributes of the CIA triad 
+
+ Security controls focus on the CIA attributes of the processing system 
+
+ Privacy: A data governance requirement that arises when collecting and processing personal data to ensure the rights of the subject's data 
+
+ Legal requirements will affect corporate governance and policies in regards to privacy of users' data 
+
+ General Data Protection Regulation [GDPR]: Personal data cannot be collected, processed, or retained without the individual's informed consent 
+
+ GDPR also provides the right for a user to withdraw consent, to inspect, amend, or erase data held about them 
+
+ GDPR requires data breach notification within 72 hours 
+
+ Warning: Data breaches can happen accidentally or through malicious interference 
