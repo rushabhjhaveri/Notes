@@ -111,3 +111,121 @@ Procedures: Detailed, step-by-step instructions that are created to ensure perso
  GDPR requires data breach notification within 72 hours 
 
  Warning: Data breaches can happen accidentally or through malicious interference 
+
+ ## Privacy Technologies ## 
+
+ Deidentification: Methods and technologies that remove identifying information from data before it is distributed 
+
+ Deidentification is often implemented as part of a database design 
+
+ Data Masking: A deidentification method where generic or placeholder labels are substituted for real data while preserving the structure or format of the original data 
+
+ Tokenization: A deidentification method where a unique token is substituted for real data 
+
+ Aggregation/Banding: A deidentification technique where data is generalized to protect the individuals involved 
+
+ Reidentification: An attack that combines a deidentified data set with other data sources to discover how secure the deidentification method used is 
+
+ ## Security Policies ## 
+
+ Privacy policies govern the labeling and handling of data 
+
+ Acceptable Use Policy: Defines the rules that restrict how a computer, network, or other systems may be used 
+
+ Change Management Policy: Defines the structured way of changing the state of a computer system, network, or IT procedure 
+
+ Separation of Duties is a preventative type of administrative control 
+
+ Job Rotation: Different users are trained to perform the tasks of the same position to help prevent and identify fraud that could occur if only one employee had the job 
+
+ Onboarding and Offboarding Policy: Dictates what type of things need to be done when an employee is hired, fired, or quits 
+
+ Terminated employees are often not cooperative 
+
+ Due Diligence: Ensuring IT infrastructure risks are known and managed properly 
+
+ Due Care: Mitigation actions that an organization takes to defend against the risks that have been uncovered during due diligence 
+
+ Due Process: A legal term that refers to how an organization must respect and safeguard personnel's rights 
+
+ Due process protects citizens from their government and companies from lawsuits 
+
+ ## User Education ## 
+
+ Security Awareness Training: Used to reinforce to users the importance of their help in securing the organization's valuable resources 
+
+ User security awareness training has the best return on investment 
+
+ Security Training: Used to teach the organization's personnel the skills they need to perform their job in a more secure manner 
+
+ Security education is generalized training [like Security+] 
+
+ Specialized training may be developed too 
+
+ ## Vendor Relationships ## 
+
+ Non-Disclosure Agreement [NDA]: Agreement between two parties that defines what data is considered confidential and cannot be shared outside of the relationship 
+
+ NDAs are a binding contract 
+
+ Memorandum of Understanding [MOU]: A non-binding agreement between two or more organizations to detail an intended common line of action 
+
+ MOUs can be between multiple organizations 
+
+ Service-Level Agreement [SLA]: An agreement concerned with the ability to support and respond to problems within a given timeframe and continuing to provide the agreed upon level of service to the user 
+
+ Interconnection Security Agreement [ISA]: An agreement for the owners and operators of the IT systems to document what technical requirements each organization must meet 
+
+ Business Partnership Agreement [BPA]: Conducted between two business partners that establishes the conditions of their relationship 
+
+ A BPA can also include security requirements 
+
+ ## Disposal Policies ## 
+
+ Asset disposal occurs whenever a system is no longer needed 
+
+ Degaussing: Exposes the hard drive to a powerful magnetic field which in turn causes previously-written data to be wiped from the drive 
+
+ Purging [Sanitizing]: Act of removing data in such a way that it cannot be reconstructed using any known forensic techniques 
+
+ Clearing: Removal of data with a certain amount of assurance that it cannot be reconstructed 
+
+ Data remnants are a big security concern 
+
+ Possible reuse of the device will influence the disposal method 
+
+ ## IT Security Frameworks ## 
+
+ Sherwood Applied Business Security Architecture [SABSA] is a risk-driven architecture 
+
+ Control Objectives for Information and Related Technology [COBIT]: A security framework that divides IT into four domains: Plan & Organize, Acquire & Implement, Deliver & Support, and Monitor & Evaluate 
+
+ NIST SP 800-53 is a security control framework developed by the Dept. of Commerce 
+
+ ITIL is the defacto standard for IT Service Management 
+
+ ## Key Frameworks ## 
+
+ Center for Information Security [CIS]: Consensus-developed secure configuration guidelines for hardening [benchmarks] and prescriptive, prioritized, and simplified sets of cybersecurity best practices [configuration guides] 
+
+ Risk Management Framework [RMF]: A process that integrates security and risk management activities into the system development life cycle through an approach to security control selection and specification that considers effectiveness, efficiency, and constraints due to applicable laws, directives, Executive Orders, policies, standards, or regulations 
+
+ Cybersecurity Framework [CSF]: A set of industry standards and best practices created by NIST to help organizations manage cybersecurity risks 
+
+ ISO 27001: An international standard that details requirements for establishing, implementing, maintaining, and continually improving an information security management system [ISMS] 
+ 
+ ISO 27002: An international standard that provides best practice recommendations on information security controls for use by those responsible for initiating, implementing, or maintaining information security management systems [ISMS] 
+ 
+ ISO 27701: An international standard that acts as a privacy extension to ISO27001 to enhance the existing ISMS with additional requirements in order to establish, implement, maintain, and continually improve a Privacy Information Management System [PIMS] 
+
+ ISO 31000: An international standard for enterprise risk management that provides a universally recognized paradigm for practitioners and companies employing risk management processes to replace the myriad of existing standards, methodologies, and paradigms that differed between industries, subject matters, and regions 
+
+ System and Organization Controls [SOC]: A suite of reports produced during an audit which is used by service organizations to issue validated reports of internal controls over those information systems to the users of those services 
+
+ SOC2 - Trust Services Criteria 
+
+ Type II - Addresses the operational effectiveness of the specified controls over a period of time [usually 9-12 months] 
+
+ Cloud Security Alliance's Cloud Control Matrix: Designed to provide fundamental security principles to guide cloud vendors and to assist prospective cloud customers in assessing the overall security risk of a cloud provider 
+
+ Cloud Security Alliance's Reference Architecture: A methodology and a set of tools that enable security architects, enterprise architects, and risk management professionals to leverage a common set of solutions that fulfill their common needs to be able to assess where their internal IT and their cloud providers are in terms of security capabilities and to plan a roadmap to meet the security needs of their business 
