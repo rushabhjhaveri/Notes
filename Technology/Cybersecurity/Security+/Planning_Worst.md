@@ -123,3 +123,7 @@ Recovery Point Objective [RPO] is focused on how long one can be without their d
 MTD and RPO help to determine which business functions are critical and to specify appropriate risk countermeasures 
 
 Designing disaster recovery and continuity of operations plans requires an understanding of availability and reliability levels 
+
+Disasters can be caused by internal or external forces 
+
+Mean Time to Repair [MTTR]: Measures the average time it takes to repair a network device when it breaks 

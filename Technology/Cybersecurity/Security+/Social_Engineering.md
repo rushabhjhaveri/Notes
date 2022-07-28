@@ -89,3 +89,13 @@ Prepending: A technical method used in social engineering to trick users into en
 Influence Operations: The collection of tactical information about an adversary as well as the dissemination of propaganda in pursuit of a competitive advantage over an opponent 
 
 Hybrid Warfare: A military strategy which employs political warfare and blends conventional warfare, irregular warfare, and cyberwarfare with other influencing methods, such as fake news, diplomacy, and foreign election intervention 
+
+## User Education ## 
+
+Never share authentication information 
+
+Clean Desk Policy: Policy where all employees must put away everything from their desk at the end of the day into locked drawers and cabinets 
+
+Train users how to encrypt emails and data 
+
+Follow organizational data handling and disposal policies 
