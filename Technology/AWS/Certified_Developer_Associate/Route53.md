@@ -155,7 +155,51 @@ Can be associated with health checks [has a failover capability]
 
 ### Routing Policy - Geolocation ### 
 
+Different from latency-based 
+
+Based on user location 
+
+Specify location by continent, country, or U.S. state [if overlapping, most precise location is selected] 
+
+Should create a default record in case there is no match for location 
+
+Use cases: website localization, restrict content distribution, load balancing 
+
+Can be associated with health checks 
+
 ### Routing Policy - Geoproximity ### 
+
+Route traffic to resources based on the geographic location of users and resources 
+
+Ability to shift more traffic to resources based on the defined bias 
+
+To change the size of the geographic region, specify bias values: 
+* To expand [1-99] - more traffic to the resource 
+* To shrink [-1-99] - less traffic to the resource
+
+Resources can be AWS resources [specify region] or non-AWS resources [specify latitude and longitude] 
+
+Must use Route 53 Traffic Flow [advanced] to use this feature 
+
+### Routing Policy - Multi-Value ### 
+
+Use when routing traffic to multiple resources 
+
+R53 return multiple values/resources 
+
+Can be associated with health checks [return only values for healthy resources] 
+
+Up to 8 healthy records are returned for each multi-value query 
+
+Multi-value is not a substitute for having an ELB 
+
+## Route 53 - Traffic Flow ## 
+
+Simplify the process of creating and maintaining records in large and complex configurations 
+
+Visual editor to manage complex routing decision trees 
+
+Configurations can be saved as traffic flow policy 
 
 ## Route 53 Health Checks ## 
 
@@ -202,3 +246,15 @@ Route 53 health checkers are outside the VPC
 They can't access private endpoints [private VPC or on-premise resource] 
 
 Can create a CloudWatch metric and associate a CloudWatch alarm, then create a health check that accesses the alarm itself 
+## Third Party Domains & Route 53 ## 
+
+### Domain Registrar vs DNS Service ### 
+
+Buy or register domain name with a domain registrar typically by paying annual charges 
+
+The domain registrar usually provides a DNS service to manage DNS records 
+
+Can use another DNS service to manage DNS records; not just AWS R53 
+
+Example: purchase domain from GoDaddy and use R53 to manage the DNS record 
+
