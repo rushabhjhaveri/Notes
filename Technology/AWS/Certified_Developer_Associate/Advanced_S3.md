@@ -69,3 +69,39 @@ There are no limits to the number of prefixes in a bucket
 Multipart upload: recommended for files > 100 MB, must use for files > 5 GB; can help parallelize uploads [speed up transfers] 
 
 S3 Transfer Acceleration: increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region; compatible with multipart upload 
+
+### S3 Byte-Range Fetches ### 
+
+Parallelize GETs by requesting specific byte-ranges 
+
+Better resilience in case of failures 
+
+Can be used to speed up downloads 
+
+Can be used to retrieve only partial data [for example, the head of a file] 
+
+## S3 Select & Glacier Select ## 
+
+Retrieve less data using SQL by performing server-side filtering 
+
+Can filter by rows and columns [simple SQL statements] 
+
+Less network transfer, less CPU cost client-side 
+
+## S3 Object Tags and Metadata ## 
+
+S3 user-defined object metadata: 
+* when uploading an object, can also assign metadata 
+* name-value [key-value] pairs 
+* user-defined metadata names must begin with "x-amz-meta-" 
+* S3 stores user-defined metadata keys in lowercase 
+* metadata can be retrieved while retrieving the object 
+
+S3 object tags: 
+* key-value pairs for objects in S3 
+* useful for fine-grained permissions [only access specific objects with specific tags] 
+* useful for analytics purposes [using S3 Analytics to group by tags] 
+
+Cannot search the object metadata or object tags 
+
+Instead, must use an external DB as a search index such as DynamoDB 
