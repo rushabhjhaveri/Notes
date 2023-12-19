@@ -178,3 +178,109 @@ Fargate Tasks - using ephemeral storage
 * 20 GB - 200 GB [default: 20 GB] 
 
 Use cases: share ephemeral data between containers; "sidecar" container pattern, where "sidecar" container is used to send metrics/logs to other destinations [separation of concerns] 
+
+## ECS Tasks Placement ## 
+
+When a task of type EC2 is launched, ECS must determine where to place it with the constraints of CPU, memory, and available port 
+
+Similarly, when a service scales in, ECS needs to determine which task to terminate 
+
+To assist with this, a task placement strategy and task placement constraints can be defined 
+
+Note: this is only for ECS with EC2; not Fargate 
+
+### ECS Task Placement Process ### 
+
+Task placement strategies are best-effort 
+
+When ECS places tasks, it uses the following process to select container instances: 
+* Identify instances that satisfy the CPU, memory, and port requirements in task definition 
+* Identify instances that satisfy task placement constraints 
+* Identify instances that satisfy task placement strategies 
+
+### ECS Task Placement Strategies ### 
+
+Binpack: 
+* Place tasks based on least-available amount of CPU or memory 
+* This minimizes number of instances in use [cost savings] 
+
+Random: place the task randomly 
+
+Spread: 
+* Place tasks evenly based on specified value 
+* E.g.: instanceId; attribute:ecs.availability-zone 
+
+Can mix task placement strategies together 
+
+### ECS Task Placement Constraints ### 
+
+distinctInstance: place each task on a different container instance 
+
+memberOf: places tasks on instances that satisfy an expression [uses the Cluster Query Language] 
+
+## Amazon ECR ## 
+
+ECR = Elastic Container Registry 
+
+Store and manage Docker images on AWS 
+
+Private and Public repository 
+
+Fully integrated with ECS; backed by S3 
+
+Access is controlled through IAM 
+
+## AWS CoPilot ## 
+
+CLI tool to build, release, and operate production-ready, containerized, applications 
+
+Run apps on AppRunner, ECS, and Fargate 
+
+Helps focus on building apps rather than setting up infrastructure 
+
+Provisions all required infrastructure for containerized apps [ECS, VPC, ELB, ECR, etc.] 
+
+Automated deployments with one command using CodePipeline 
+
+Deploy to multiple environments 
+
+Troubleshooting, logs, health status, etc. 
+
+## Amazon EKS ## 
+
+EKS = Elastic Kubernetes Service 
+
+Way to launch managed Kubernetes clusters on AWS 
+
+Kubernetes is an open-source system for automatic deployment, scaling, and management of containerized [usually Docker] applications 
+
+It is an alternative to ECS; similar but different API 
+
+EKS supports EC2 if desired to deploy worker nodes, or Fargate if a serverless solution is preferred 
+
+Use-case: if the company is already using Kubernetes on-prem or in another cloud, and wants to migrate to AWS 
+
+Kubernetes is cloud-agnostic [can be used in any cloud: AWS, Azure, GCP, etc.] 
+
+### EKS Node Types ### 
+
+Managed Node Groups: 
+* Creates and manages nodes [EC2 instances] for you 
+* Nodes are part of an ASG managed by EKS 
+* Supports on-demand or spot instances 
+
+Self-Managed Nodes: 
+* Nodes that are created by application owners, registered to an EKS cluster, and managed by an ASG 
+* Can use prebuilt AMI - Amazon EKS Optimized AMI 
+* Supports on-demand or spot instances 
+
+AWS Fargate: 
+* No maintenance required, no nodes managed 
+
+### EKS Data Volumes ### 
+
+Need to specify StorageClass manifest on EKS cluster 
+
+Leverages a Container Storage Interface [CSI] compliant driver 
+
+Support for EBS, EFS [works with Fargate], FSx for Lustre, FSx for NetApp ONTAP
